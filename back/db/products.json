@@ -1,0 +1,236 @@
+[
+  {
+    "id": 1,
+    "title": "beni shoga",
+    "desc": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+    "price": "10.00",
+    "images": ["../images/prod1_1.jpg", "../images/prod1_2.jpg"],
+    "stock": 20,
+    "timesBought": 5,
+    "nutritionFacts": {
+      "Total Fat": "0.6g 1%",
+      "Cholesterol": "0mg 0%",
+      "Sodium": "400mg 17%",
+      "Potassium": "0mg 0%",
+      "Total Carbohydrate": "0g 0%",
+      "Protein": "23.5g 47%",
+      "Vitamin A": "0%",
+      "Vitamin C": "0%",
+      "Calcium": "0%",
+      "Iron": "0%"
+    },
+    "reviwes": {
+      "stars": 5,
+      "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+      "author": "John Doe"
+    }
+  },
+  {
+    "id": 2,
+    "title": "do chua",
+    "desc": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
+    "price": "10.00",
+    "images": ["../images/prod2_1.jpg", "../images/prod2_2.jpg"],
+    "stock": 20,
+    "timesBought": 5,
+    "nutritionFacts": {
+      "Total Fat": "0.6g 1%",
+      "Cholesterol": "0mg 0%",
+      "Sodium": "400mg 17%",
+      "Potassium": "0mg 0%",
+      "Total Carbohydrate": "0g 0%",
+      "Protein": "23.5g 47%",
+      "Vitamin A": "0%",
+      "Vitamin C": "0%",
+      "Calcium": "0%",
+      "Iron": "0%"
+    },
+    "reviwes": {
+      "stars": 5,
+      "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+      "author": "John Doe"
+    }
+  },
+  {
+    "id": 3,
+    "title": "lemons",
+    "desc": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut",
+    "price": "10.00",
+    "images": ["../images/prod3_1.jpg", "../images/prod3_2.jpg"],
+    "stock": 20,
+    "timesBought": 5,
+    "nutritionFacts": {
+      "Total Fat": "0.6g 1%",
+      "Cholesterol": "0mg 0%",
+      "Sodium": "400mg 17%",
+      "Potassium": "0mg 0%",
+      "Total Carbohydrate": "0g 0%",
+      "Protein": "23.5g 47%",
+      "Vitamin A": "0%",
+      "Vitamin C": "0%",
+      "Calcium": "0%",
+      "Iron": "0%"
+    },
+    "reviwes": {
+      "stars": 5,
+      "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+      "author": "John Doe"
+    }
+  },
+  {
+    "id": 4,
+    "title": "sauerkraut",
+    "desc": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",
+    "price": "10.00",
+    "images": ["../images/prod3_1.jpg", "../images/prod4_2.jpg"],
+    "stock": 20,
+    "timesBought": 5,
+    "nutritionFacts": {
+      "Total Fat": "0.6g 1%",
+      "Cholesterol": "0mg 0%",
+      "Sodium": "400mg 17%",
+      "Potassium": "0mg 0%",
+      "Total Carbohydrate": "0g 0%",
+      "Protein": "23.5g 47%",
+      "Vitamin A": "0%",
+      "Vitamin C": "0%",
+      "Calcium": "0%",
+      "Iron": "0%"
+    },
+    "reviwes": {
+      "stars": 5,
+      "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+      "author": "John Doe"
+    }
+  },
+  {
+    "id": 5,
+    "title": "caperberries",
+    "desc": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque",
+    "price": "10.00",
+    "images": ["../images/prod5_1.jpg", "../images/prod5_2.jpg"],
+    "stock": 20,
+    "timesBought": 5,
+    "nutritionFacts": {
+      "Total Fat": "0.6g 1%",
+      "Cholesterol": "0mg 0%",
+      "Sodium": "400mg 17%",
+      "Potassium": "0mg 0%",
+      "Total Carbohydrate": "0g 0%",
+      "Protein": "23.5g 47%",
+      "Vitamin A": "0%",
+      "Vitamin C": "0%",
+      "Calcium": "0%",
+      "Iron": "0%"
+    },
+    "reviwes": {
+      "stars": 5,
+      "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+      "author": "John Doe"
+    }
+  },
+  {
+    "id": 6,
+    "title": "beets",
+    "desc": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae",
+    "price": "10.00",
+    "images": ["../images/prod6_1.jpg", "../images/prod6_2.jpg"],
+    "stock": 20,
+    "timesBought": 5,
+    "nutritionFacts": {
+      "Total Fat": "0.6g 1%",
+      "Cholesterol": "0mg 0%",
+      "Sodium": "400mg 17%",
+      "Potassium": "0mg 0%",
+      "Total Carbohydrate": "0g 0%",
+      "Protein": "23.5g 47%",
+      "Vitamin A": "0%",
+      "Vitamin C": "0%",
+      "Calcium": "0%",
+      "Iron": "0%"
+    },
+    "reviwes": {
+      "stars": 5,
+      "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+      "author": "John Doe"
+    }
+  },
+  {
+    "id": 7,
+    "title": "spring mix",
+    "desc": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas",
+    "price": "15.00",
+    "images": ["../images/prod7_1.jpg", "../images/prod7_2.jpg"],
+    "stock": 20,
+    "timesBought": 5,
+    "nutritionFacts": {
+      "Total Fat": "0.6g 1%",
+      "Cholesterol": "0mg 0%",
+      "Sodium": "400mg 17%",
+      "Potassium": "0mg 0%",
+      "Total Carbohydrate": "0g 0%",
+      "Protein": "23.5g 47%",
+      "Vitamin A": "0%",
+      "Vitamin C": "0%",
+      "Calcium": "0%",
+      "Iron": "0%"
+    },
+    "reviwes": {
+      "stars": 5,
+      "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+      "author": "John Doe"
+    }
+  },
+  {
+    "id": 8,
+    "title": "kimchi",
+    "desc": "dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae",
+    "price": "15.00",
+    "images": ["../images/prod8_1.jpg", "../images/prod8_2.jpg"],
+    "stock": 20,
+    "timesBought": 5,
+    "nutritionFacts": {
+      "Total Fat": "0.6g 1%",
+      "Cholesterol": "0mg 0%",
+      "Sodium": "400mg 17%",
+      "Potassium": "0mg 0%",
+      "Total Carbohydrate": "0g 0%",
+      "Protein": "23.5g 47%",
+      "Vitamin A": "0%",
+      "Vitamin C": "0%",
+      "Calcium": "0%",
+      "Iron": "0%"
+    },
+    "reviwes": {
+      "stars": 5,
+      "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+      "author": "John Doe"
+    }
+  },
+  {
+    "id": 9,
+    "title": "dill pickles",
+    "desc": "consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas",
+    "price": "15.00",
+    "images": ["../images/prod9_1.jpg", "../images/prod9_2.jpg"],
+    "stock": 20,
+    "timesBought": 5,
+    "nutritionFacts": {
+      "Total Fat": "0.6g 1%",
+      "Cholesterol": "0mg 0%",
+      "Sodium": "400mg 17%",
+      "Potassium": "0mg 0%",
+      "Total Carbohydrate": "0g 0%",
+      "Protein": "23.5g 47%",
+      "Vitamin A": "0%",
+      "Vitamin C": "0%",
+      "Calcium": "0%",
+      "Iron": "0%"
+    },
+    "reviwes": {
+      "stars": 5,
+      "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+      "author": "John Doe"
+    }
+  }
+]
