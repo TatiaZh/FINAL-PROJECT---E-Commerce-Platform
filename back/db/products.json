@@ -19,11 +19,20 @@
       "Calcium": "0%",
       "Iron": "0%"
     },
-    "reviwes": {
-      "stars": 5,
-      "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
-      "author": "John Doe"
-    }
+    "reviwes": [
+      {
+        "stars": 1,
+        "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+        "author": "John Doe"
+      },
+      {
+        "stars": 4,
+        "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+        "author": "John Doe"
+      }
+    ],
+    "avrStars": 2.5,
+    "enabled": true
   },
   {
     "id": 2,
@@ -45,11 +54,20 @@
       "Calcium": "0%",
       "Iron": "0%"
     },
-    "reviwes": {
-      "stars": 5,
-      "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
-      "author": "John Doe"
-    }
+    "reviwes": [
+      {
+        "stars": 5,
+        "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+        "author": "John Doe"
+      },
+      {
+        "stars": 4,
+        "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+        "author": "John Doe"
+      }
+    ],
+    "avrStars": 4.5,
+    "enabled": true
   },
   {
     "id": 3,
@@ -71,11 +89,20 @@
       "Calcium": "0%",
       "Iron": "0%"
     },
-    "reviwes": {
-      "stars": 5,
-      "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
-      "author": "John Doe"
-    }
+    "reviwes": [
+      {
+        "stars": 5,
+        "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+        "author": "John Doe"
+      },
+      {
+        "stars": 4,
+        "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+        "author": "John Doe"
+      }
+    ],
+    "avrStars": 4.5,
+    "enabled": true
   },
   {
     "id": 4,
@@ -97,11 +124,20 @@
       "Calcium": "0%",
       "Iron": "0%"
     },
-    "reviwes": {
-      "stars": 5,
-      "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
-      "author": "John Doe"
-    }
+    "reviwes": [
+      {
+        "stars": 5,
+        "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+        "author": "John Doe"
+      },
+      {
+        "stars": 4,
+        "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+        "author": "John Doe"
+      }
+    ],
+    "avrStars": 4.5,
+    "enabled": true
   },
   {
     "id": 5,
@@ -123,11 +159,20 @@
       "Calcium": "0%",
       "Iron": "0%"
     },
-    "reviwes": {
-      "stars": 5,
-      "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
-      "author": "John Doe"
-    }
+    "reviwes": [
+      {
+        "stars": 5,
+        "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+        "author": "John Doe"
+      },
+      {
+        "stars": 4,
+        "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+        "author": "John Doe"
+      }
+    ],
+    "avrStars": 4.5,
+    "enabled": true
   },
   {
     "id": 6,
@@ -149,11 +194,20 @@
       "Calcium": "0%",
       "Iron": "0%"
     },
-    "reviwes": {
-      "stars": 5,
-      "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
-      "author": "John Doe"
-    }
+    "reviwes": [
+      {
+        "stars": 5,
+        "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+        "author": "John Doe"
+      },
+      {
+        "stars": 4,
+        "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+        "author": "John Doe"
+      }
+    ],
+    "avrStars": 4.5,
+    "enabled": true
   },
   {
     "id": 7,
@@ -175,11 +229,20 @@
       "Calcium": "0%",
       "Iron": "0%"
     },
-    "reviwes": {
-      "stars": 5,
-      "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
-      "author": "John Doe"
-    }
+    "reviwes": [
+      {
+        "stars": 5,
+        "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+        "author": "John Doe"
+      },
+      {
+        "stars": 4,
+        "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+        "author": "John Doe"
+      }
+    ],
+    "avrStars": 4.5,
+    "enabled": true
   },
   {
     "id": 8,
@@ -201,11 +264,20 @@
       "Calcium": "0%",
       "Iron": "0%"
     },
-    "reviwes": {
-      "stars": 5,
-      "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
-      "author": "John Doe"
-    }
+    "reviwes": [
+      {
+        "stars": 5,
+        "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+        "author": "John Doe"
+      },
+      {
+        "stars": 4,
+        "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+        "author": "John Doe"
+      }
+    ],
+    "avrStars": 4.5,
+    "enabled": true
   },
   {
     "id": 9,
@@ -227,10 +299,43 @@
       "Calcium": "0%",
       "Iron": "0%"
     },
-    "reviwes": {
-      "stars": 5,
-      "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
-      "author": "John Doe"
-    }
+    "reviwes": [
+      {
+        "stars": 5,
+        "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+        "author": "John Doe"
+      },
+      {
+        "stars": 4,
+        "text": "Praesent laoreet ornare ligula, ac accumsan turpis sagittis at. Integer auctor egestas eleifend. Etiam luctus mattis justo, vitae fermentum libero euismod lacinia. Proin at consequat risus. Praesent sollicitudin vestibulum felis, ut sodales enim.",
+        "author": "John Doe"
+      }
+    ],
+    "avrStars": 4.5,
+    "enabled": true
+  },
+  {
+    "id": 10,
+    "title": "heeyyyyy",
+    "desc": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+    "price": "10.00",
+    "images": ["../images/prod1_1.jpg", "../images/prod1_2.jpg"],
+    "stock": 20,
+    "timesBought": 0,
+    "nutritionFacts": {
+      "Total Fat": "0.6g 1%",
+      "Cholesterol": "0mg 0%",
+      "Sodium": "400mg 17%",
+      "Potassium": "0mg 0%",
+      "Total Carbohydrate": "0g 0%",
+      "Protein": "23.5g 47%",
+      "Vitamin A": "0%",
+      "Vitamin C": "0%",
+      "Calcium": "0%",
+      "Iron": "0%"
+    },
+    "reviews": [],
+    "avrStars": 4.5,
+    "enabled": true
   }
 ]
