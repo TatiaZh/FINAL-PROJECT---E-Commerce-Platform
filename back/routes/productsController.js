@@ -1,11 +1,9 @@
 const express = require('express');
 const fs = require('fs');
-// const path = require("path");
 const router = express.Router();
 
 const Product = require('../models/Product');
 const validateProduct = require('../models/Validator').validateProduct;
-const productsDB = require('../db/products');
 
 router.route('/').get((req, res) => {
   const productsDB = JSON.parse(fs.readFileSync('db/products.json'));

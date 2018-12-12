@@ -13,6 +13,8 @@ app.use(express.static(path.join(__dirname, '/back')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use('/api/admin', adminController);
+app.use('/api/users', usersController);
 app.use('/api/products', productsController);
 
 app.get('/', (req, res) => {
