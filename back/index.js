@@ -1,0 +1,24 @@
+const express = require('express');
+const path = require('path');
+const app = express();
+
+const productsController = require('./routes/productsController');
+const adminController = require('./routes/adminController');
+
+const PORT = process.env.PORT || 5000;
+
+app.use(express.static(path.join(__dirname, '/back')));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.use('/api/admin', adminController);
+// app.use('/api/users', usersController);
+app.use('/api/admin/products', productsController);
+
+app.get('/', (req, res) => {
+  res.send('Hello');
+});
+
+app.listen(PORT, () => {
+  console.log(`Started at port - ${PORT}`);
+});
