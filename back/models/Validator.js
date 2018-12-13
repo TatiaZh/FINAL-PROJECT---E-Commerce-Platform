@@ -1,5 +1,13 @@
 function validateProduct(product) {
-  const { title, desc, price, images, stock, nutritionFacts } = product;
+  const {
+    title,
+    desc,
+    price,
+    images,
+    stock,
+    nutritionFacts,
+    enabled
+  } = product;
   if (typeof title !== 'string' || typeof desc !== 'string') {
     return {
       error:
@@ -14,7 +22,18 @@ function validateProduct(product) {
       error: 'product must have images parameter and it must be in array format'
     };
   }
-  return { title, desc, price, images, stock, nutritionFacts };
+  if (typeof enabled !== 'boolean') {
+    return {
+      error:
+        'product must have enabled parameter and it must be in boolean format'
+    };
+  }
+  return { title, desc, price, images, stock, nutritionFacts, enabled };
 }
 
-module.exports = validateProduct;
+function validateUser(user) {}
+
+module.exports = {
+  validateProduct,
+  validateUser
+};

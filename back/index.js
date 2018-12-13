@@ -3,19 +3,17 @@ const path = require('path');
 const app = express();
 
 const productsController = require('./routes/productsController');
+const adminController = require('./routes/adminController');
 
 const PORT = process.env.PORT || 5000;
-
-const admin = require('./db/admin');
-const users = require('./db/users');
 
 app.use(express.static(path.join(__dirname, '/back')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use('/api/admin', adminController);
-app.use('/api/users', usersController);
-app.use('/api/products', productsController);
+// app.use('/api/users', usersController);
+app.use('/api/admin/products', productsController);
 
 app.get('/', (req, res) => {
   res.send('Hello');

@@ -14,7 +14,7 @@ class Product {
 
   static update(
     oldProd,
-    { title, desc, price, images, stock, nutritionFacts }
+    { title, desc, price, images, stock, nutritionFacts, timesBought }
   ) {
     oldProd.title = title || oldProd.title;
     oldProd.desc = desc || oldProd.desc;
@@ -22,22 +22,23 @@ class Product {
     oldProd.images = images || oldProd.images;
     oldProd.stock = stock || oldProd.stock;
     oldProd.nutritionFacts = nutritionFacts || oldProd.nutritionFacts;
+    oldProd.timesBought = timesBought || oldProd.timesBought;
   }
 
-  incTimesBought(quantity) {
-    this.timesBought = this.timesBought + quantity;
+  static updateReviews(product, review) {
+    product.reviews.push(review);
   }
 
-  updateReviews(review) {
-    this.reviews.push(review);
+  static updateAvrStars(product, avrStars) {
+    product.avrStars = product.avrStars || avrStars;
   }
 
-  enable() {
-    this.enabled = true;
+  static updateTimesBought(product, timesBought) {
+    product.timesBought = product.timesBought || timesBought;
   }
 
-  disable() {
-    this.enabled = false;
+  static updateStock(product, stock) {
+    product.stock = product.stock || stock;
   }
 }
 
