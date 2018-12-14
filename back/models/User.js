@@ -1,0 +1,51 @@
+class User {
+  constructor({
+    id,
+    name,
+    username,
+    email,
+    password,
+    age,
+    birthday,
+    adress,
+    phone
+  }) {
+    this.id = id;
+    this.name = name;
+    this.username = username;
+    this.email = email;
+    this.password = password;
+    this.age = age;
+    this.birthday = birthday;
+    this.adress = adress;
+    this.phone = phone;
+    this.balance = '0';
+    this.broughtProducts = [];
+    this.cart = {
+      active: false,
+      products: []
+    };
+  }
+
+  static update(
+    oldUser,
+    { name, email, password, age, birthday, adress, phone }
+  ) {
+    oldUser.name = name || oldUser.name;
+    oldUser.email = email || oldUser.email;
+    oldUser.password = password || oldUser.password;
+    oldUser.age = age || oldUser.age;
+    oldUser.birthday = birthday || oldUser.birthday;
+    oldUser.adress = adress || oldUser.adress;
+    oldUser.phone = phone || oldUser.phone;
+  }
+
+  static updateBalance(user, balance) {
+    user.balance = balance || user.balance;
+  }
+  static updateUserName(user, username) {
+    user.username = username || user.username;
+  }
+}
+
+module.exports = User;
