@@ -51,6 +51,22 @@ function validateProduct(product) {
   return { title, desc, price, images, stock, nutritionFacts, enabled };
 }
 
+function validateCartProduct(product) {
+  const { productId, quantity } = product;
+  if (!isString(productId)) {
+    return {
+      error: 'product must have id property and it must be in string format'
+    };
+  }
+  if (!isString(quantity)) {
+    return {
+      error:
+        'product must have quantity property and it must be in string format'
+    };
+  }
+  return { productId, quantity };
+}
+
 function validateUser(user) {
   const { name, username, age, birthday, address, phone } = user;
   const { country, region, street, suite, zipcode } = address;
@@ -108,6 +124,27 @@ function validateUser(user) {
   return { name, username, email, password, age, birthday, address, phone };
 }
 
+function validatePayment(data) {
+  const { balance, products } = data;
+  if (!isString(balance)) {
+    return {
+      error:
+        'payment must have balance property and it must be in string format'
+    };
+  }
+  if (!(products instanceof Array)) {
+    return {
+      error:
+        'payment must have products property and it must be in array format'
+    };
+  }
+  for (prod of products) {
+    const res = validateCartProduct(prod);
+  }
+
+  return { balance, products };
+}
+
 function validateMessage(message) {
   const { title, text, sender, dateSent } = message;
   const { name, surname, email } = sender;
@@ -161,7 +198,9 @@ function validateLogin(data) {
 
 module.exports = {
   validateProduct,
+  validateCartProduct,
   validateUser,
+  validatePayment,
   validateMessage,
   validateLogin
 };

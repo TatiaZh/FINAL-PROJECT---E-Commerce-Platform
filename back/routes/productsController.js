@@ -30,6 +30,27 @@ router.route('/add').post((req, res) => {
   return res.json(product);
 });
 
+// in case we want to return multiple but specific products.
+// for example - handy with cart, this way we avoid sending too many requests
+// path will be /api/admin/products/multiple
+router.route('/multiple').get((req, res) => {
+  const productsDB = JSON.parse(fs.readFileSync('db/products.json'));
+
+  const idArray = req.body.idArray;
+  const filteredDB = [];
+  for (let id of idArray) {
+    const product = productsDB.find(product => product.id == id);
+    if (!product) {
+      return res
+        .status(404)
+        .json({ message: `product with id ${id} not found` });
+    }
+    filteredDB.push(product);
+  }
+
+  return res.json(filteredDB);
+});
+
 // path will be /api/admin/products/{id} example: /api/admin/products/10
 router.route('/:id').get((req, res) => {
   const id = req.params.id;
@@ -62,8 +83,23 @@ router.route('/:id').put((req, res) => {
   return res.json(product);
 });
 
+// path will be /api/admin/products/{id}  example: /api/admin/products/10
+router.route('/:id').delete((req, res) => {
+  const productsDB = JSON.parse(fs.readFileSync('db/products.json'));
+
+  const id = req.params.id;
+  const product = productsDB.find(product => product.id == id);
+  if (!product) {
+    return res.status(404).json({ message: 'product not found' });
+  }
+
+  productsDB.splice(productsDB.indexOf(product), 1);
+  fs.writeFileSync('db/products.json', JSON.stringify(productsDB, null, 2));
+  return res.json(product);
+});
+
 // updates reviews and average stars
-// path will be /api/admin/products/{id}/addreview   example: /api/admin/products/10/addreview
+// path will be /api/admin/products/{id}/reviews/add   example: /api/admin/products/10/reviews/add
 router.route('/:id/reviews/add').put((req, res) => {
   let productsDB = JSON.parse(fs.readFileSync('db/products.json'));
   const id = req.params.id;
@@ -96,21 +132,6 @@ router.route('/:id/sold').put((req, res) => {
 
   Product.updateTimesBought(product, timesBought);
   Product.updateStock(product, stock);
-  fs.writeFileSync('db/products.json', JSON.stringify(productsDB, null, 2));
-  return res.json(product);
-});
-
-// path will be /api/admin/products/{id}  example: /api/admin/products/10
-router.route('/:id').delete((req, res) => {
-  const productsDB = JSON.parse(fs.readFileSync('db/products.json'));
-
-  const id = req.params.id;
-  const product = productsDB.find(product => product.id == id);
-  if (!product) {
-    return res.status(404).json({ message: 'product not found' });
-  }
-
-  productsDB.splice(productsDB.indexOf(product), 1);
   fs.writeFileSync('db/products.json', JSON.stringify(productsDB, null, 2));
   return res.json(product);
 });

@@ -46,6 +46,18 @@ class User {
   static updateUserName(user, username) {
     user.username = username || user.username;
   }
+  static updatebroughtProducts(user, broughtProducts) {
+    user.broughtProducts = broughtProducts || user.broughtProducts;
+  }
+  static addToCart(user, product) {
+    user.cart.push({ id: product.productId, quantity: product.quantity });
+  }
+  static removeFromCart(user, product) {
+    user.cart.splice(user.cart.indexOf(product), 1);
+  }
+  static emptyCart(user) {
+    user.cart.length = 0;
+  }
 }
 
 module.exports = User;

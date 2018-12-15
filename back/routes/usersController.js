@@ -6,6 +6,7 @@ const router = express.Router();
 const User = require('../models/User');
 const validateUser = require('../models/Validator').validateUser;
 const validateLogin = require('../models/Validator').validateLogin;
+const validatePayment = require('../models/Validator').validatePayment;
 
 const secret = 'secret_password';
 
@@ -47,7 +48,7 @@ router.route('/register').post((req, res) => {
   return res.json(user);
 });
 
-// path will be /api/users/register
+// path will be /api/users/login
 router.route('/login').post((req, res) => {
   const data = validateLogin(req.body);
   if (data.error) {
@@ -129,4 +130,22 @@ router.route('/:id').delete((req, res) => {
   fs.writeFileSync('db/users.json', JSON.stringify(usersDB, null, 2));
   return res.json(user);
 });
+
+router.route('/:id/payment').post((req, res) => {
+  const id = req.params.id;
+  const usersDB = JSON.parse(fs.readFileSync('db/users.json'));
+
+  const user = usersDB.find(user => user.id == id);
+  if (!user) {
+    return res.status(404).json({ message: 'user not found' });
+  }
+
+  const { balance, products } = validatePayment(req.body);
+  User.updateBalance(user, balance);
+  User.updatebroughtProducts(user, products);
+
+  fs.writeFileSync('db/users.json', JSON.stringify(usersDB, null, 2));
+  return res.json(user);
+});
+
 module.exports = router;

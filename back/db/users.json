@@ -1,5 +1,13 @@
 [
   {
+    "id": 0,
+    "name": "Admin Someone",
+    "username": "admin",
+    "email": "admin@admin.com",
+    "password": "b9dad3ba59239703f30ec3ee7e071f95ce7074545e357fc0fc06be841d8386e4",
+    "isAdmin": true
+  },
+  {
     "id": 1,
     "name": "Leanne Graham",
     "username": "Bret",
@@ -9,11 +17,22 @@
     "birthday": "1991-11-11",
     "phone": "1-770-736-8031 x56442",
     "balance": "1000",
-    "broughtProducts": ["product1", "product2"],
-    "cart": {
-      "active": true,
-      "products": ["product1, product2"]
-    }
+    "broughtProducts": [
+      {
+        "id": "1",
+        "quantity": "1"
+      }
+    ],
+    "cart": [
+      {
+        "id": "1",
+        "quantity": "1"
+      },
+      {
+        "id": "2",
+        "quantity": "3"
+      }
+    ]
   },
   {
     "id": 2,
@@ -25,11 +44,30 @@
     "birthday": "1991-11-11",
     "phone": "010-692-6593 x09125",
     "balance": "1000",
-    "broughtProducts": ["product1", "product2"],
-    "cart": {
-      "active": true,
-      "products": ["product1", "product2", "product3"]
-    }
+    "broughtProducts": [
+      {
+        "id": "1",
+        "quantity": "1"
+      },
+      {
+        "id": "2",
+        "quantity": "1"
+      }
+    ],
+    "cart": [
+      {
+        "id": "1",
+        "quantity": "1"
+      },
+      {
+        "id": "2",
+        "quantity": "1"
+      },
+      {
+        "id": "3",
+        "quantity": "1"
+      }
+    ]
   },
   {
     "id": 3,
@@ -41,11 +79,17 @@
     "birthday": "1991-11-11",
     "phone": "1-463-123-4447",
     "balance": "1000",
-    "broughtProducts": ["product1", "product2"],
-    "cart": {
-      "active": false,
-      "products": []
-    }
+    "broughtProducts": [
+      {
+        "id": "1",
+        "quantity": "1"
+      },
+      {
+        "id": "2",
+        "quantity": "1"
+      }
+    ],
+    "cart": []
   },
   {
     "id": 4,
@@ -58,9 +102,6 @@
     "phone": "493-170-9623 x156",
     "balance": "0",
     "broughtProducts": [],
-    "cart": {
-      "active": false,
-      "products": []
-    }
+    "cart": []
   }
 ]
