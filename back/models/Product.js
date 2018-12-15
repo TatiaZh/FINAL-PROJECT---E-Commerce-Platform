@@ -6,7 +6,7 @@ class Product {
     this.price = price;
     this.images = images;
     this.stock = stock;
-    this.timesBought = 0;
+    this.timesBought = '0';
     this.nutritionFacts = nutritionFacts;
     this.reviews = [];
     this.enabled = true;

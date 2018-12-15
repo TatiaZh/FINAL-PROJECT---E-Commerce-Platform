@@ -21,11 +21,10 @@ router.route('/add').post((req, res) => {
   }
   for (let prod of productsDB) {
     if (prod.title === product.title) {
-      console.log(product.title);
       return res.status(400).json({ message: 'Product already exists' });
     }
   }
-  const id = productsDB[productsDB.length - 1].id + 1;
+  const id = productsDB[productsDB.length - 1].id + 1 || 1;
   productsDB.push(new Product({ id, ...product }));
   fs.writeFileSync('db/products.json', JSON.stringify(productsDB, null, 2));
   return res.json(product);
@@ -65,7 +64,7 @@ router.route('/:id').put((req, res) => {
 
 // updates reviews and average stars
 // path will be /api/admin/products/{id}/addreview   example: /api/admin/products/10/addreview
-router.route('/:id/addreview').put((req, res) => {
+router.route('/:id/reviews/add').put((req, res) => {
   let productsDB = JSON.parse(fs.readFileSync('db/products.json'));
   const id = req.params.id;
   const review = req.body.review;
@@ -88,6 +87,7 @@ router.route('/:id/sold').put((req, res) => {
   let productsDB = JSON.parse(fs.readFileSync('db/products.json'));
   const id = req.params.id;
   const timesBought = req.params.timesBought;
+  const stock = req.params.stock;
 
   let product = productsDB.find(product => product.id == id);
   if (!product) {

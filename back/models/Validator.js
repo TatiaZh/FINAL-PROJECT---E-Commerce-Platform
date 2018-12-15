@@ -1,3 +1,23 @@
+const validator = require('validator');
+
+// checking if variable is string and if it excits at all
+// if it is a large object or something else it might be problematic
+// (kinda protecting database)
+function isString(str) {
+  return typeof str === 'string' || str instanceof String;
+}
+
+// checking if date is in YYYY-MM-DD format
+function isCorrectDate(date) {
+  return /^\d{4}-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/.test(date);
+}
+
+// checking if age is greater than 18 and two digits
+function isCorrectAge(age) {
+  return age > 18 && /^\d{2}$/.test(age);
+}
+
+// product validation
 function validateProduct(product) {
   const {
     title,
@@ -8,32 +28,140 @@ function validateProduct(product) {
     nutritionFacts,
     enabled
   } = product;
-  if (typeof title !== 'string' || typeof desc !== 'string') {
+  if (!isString(title) || !isString(desc)) {
     return {
       error:
-        'product mus have title/desc parameters and they must be in string format'
+        'product must have title/desc properties and they must be in string format'
     };
   }
-  if (!price || !stock) {
-    return { error: 'product must have price and stock parameters' };
+  if (!isSting(price) || !isString(stock)) {
+    return { error: 'product must have price and stock properties' };
   }
   if (!(images instanceof Array)) {
     return {
-      error: 'product must have images parameter and it must be in array format'
+      error: 'product must have images property and it must be in array format'
     };
   }
   if (typeof enabled !== 'boolean') {
     return {
       error:
-        'product must have enabled parameter and it must be in boolean format'
+        'product must have enabled property and it must be in boolean format'
     };
   }
   return { title, desc, price, images, stock, nutritionFacts, enabled };
 }
 
-function validateUser(user) {}
+function validateUser(user) {
+  const { name, username, age, birthday, address, phone } = user;
+  const { country, region, street, suite, zipcode } = address;
+
+  // validator syntax
+  const email = user.email || '';
+  const password = user.password || '';
+
+  if (!isString(name) || !isString(username)) {
+    return {
+      error:
+        'user must have name/username properties and they must be in string format'
+    };
+  }
+
+  if (!isString(age) || !isCorrectAge(age)) {
+    return {
+      error:
+        'user must have age property it must be greater than 18 and a two digit number'
+    };
+  }
+
+  if (!isCorrectDate(birthday)) {
+    return {
+      error: 'user must have birthday property and it must be YYYY-MM-DD format'
+    };
+  }
+
+  if (!validator.isEmail(email)) {
+    return {
+      error: 'user must have email poperty and it must be in correct format'
+    };
+  }
+
+  if (!validator.isLength(password, { min: 6, max: 30 })) {
+    return {
+      error: 'password must be at least 6 and less than 30 characters long'
+    };
+  }
+
+  if (
+    !isString(phone) ||
+    !isString(country) ||
+    !isString(region) ||
+    !isString(street) ||
+    !isString(suite) ||
+    !isString(zipcode)
+  ) {
+    return {
+      error:
+        'user must have phone/address(country/region/street/suite/zipcode) properties and they must be in string format'
+    };
+  }
+
+  return { name, username, email, password, age, birthday, address, phone };
+}
+
+function validateMessage(message) {
+  const { title, text, sender, dateSent } = message;
+  const { name, surname, email } = sender;
+
+  if (!isString(title) || !isString(text)) {
+    return {
+      error:
+        'message must have title/text properties and they must be in string format'
+    };
+  }
+
+  if (!isCorrectDate(dateSent)) {
+    return {
+      error:
+        'message must have dateSent property and it must be YYYY-MM-DD format'
+    };
+  }
+
+  if (!isString(name) || !isString(surname)) {
+    return {
+      error:
+        'message must have sender property and it must contain name and surname properties in string format'
+    };
+  }
+
+  if (!validator.isEmail(email)) {
+    return {
+      error:
+        'message must have sender poperty containig email property in correct format'
+    };
+  }
+
+  return { title, text, sender, dateSent };
+}
+
+function validateLogin(data) {
+  const email = data.email || '';
+  const password = data.password || '';
+  if (!validator.isEmail(email)) {
+    return {
+      error: 'login must have email poperty in correct format'
+    };
+  }
+  if (!validator.isLength(password, { min: 6, max: 30 })) {
+    return {
+      error: 'password must be at least 6 and less than 30 characters long'
+    };
+  }
+  return { email, password };
+}
 
 module.exports = {
   validateProduct,
-  validateUser
+  validateUser,
+  validateMessage,
+  validateLogin
 };
