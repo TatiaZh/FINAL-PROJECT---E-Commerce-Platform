@@ -1,0 +1,53 @@
+.mainBody--wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1800px;
+    height: 100%;
+    background-image: url('../images/pickles-editorial-green-v6.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+}
+.mainBody{
+    display: flex;
+    padding: 30px 10px;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    height: 600px;
+    width: 90%;
+    color: white;
+}
+.batch-1--wrapper{
+    width: 400px;
+    height: 400px;
+}
+.batch-1 > h1 {
+    font-size: 5em;
+    font-weight: 100;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.shop-Btn{
+    font-size: 1.8em;
+    width: 150px;
+    margin-top: 50px;
+    transition: 0.3s;
+}
+.shop-Btn > hr {
+    width: 100%;
+}
+.shop-Btn:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.493)
+}
