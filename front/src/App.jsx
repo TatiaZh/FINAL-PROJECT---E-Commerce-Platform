@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route } from 'react-router-dom';
+import Header from './components/header';
+import Body from './components/mainBody';
 import Home from './components/adminPanel/home/Home';
 import './App.css';
 import './fontAwesome';
@@ -11,8 +13,9 @@ class App extends Component {
     return (
       <Router>
         <>
-          <div className="App">
-            <Route path="/" exact render={() => <HeaderMy />} />
+          <div className="container">
+            <Header />
+            <Body />
             <Route path="/admin" render={props => <Home {...props} />} />
           </div>
         </>
