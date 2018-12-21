@@ -3,18 +3,19 @@ header {
    justify-content: center;
    width: 100%;
    background-color: white;
-}
 
-.header__inner {
-   display: flex;
-   padding: 30px 10px;
-   max-width: 1800px;
-   margin-left: auto;
-   margin-right: auto;
-   padding-top: 20px;
-   padding-bottom: 20px;
+}
+.header__inner--wrapper{
    padding-left: 70px;
    padding-right: 70px;
+   width: 90%;
+   max-width: 1800px;
+}
+.header__inner {
+   display: flex;
+   width: 100%;
+   padding-top: 20px;
+   padding-bottom: 20px;
    box-sizing: border-box;
 }
 
@@ -27,6 +28,7 @@ nav {
 nav ul{
    list-style-type: none;
    display: inline-flex;
+   padding-left: 0px;
 }
 
 nav ul li {
@@ -69,10 +71,29 @@ nav ul li a:hover {
 
 /* ~~~~ CART ~~~~ */
 .header__inner__cart {
-   flex: 1;
    display: flex;
+   justify-content: center;
+   align-items: center;
+   flex: 1;
    justify-content: flex-end;
+}
+.header__inner__cart:hover{
+   cursor: pointer;
 }
 .fa-shopping-cart {
    font-size: 32px;
+}
+.item-count__div{
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   background-color: chocolate;
+   color: #fff;
+   width: 20px;
+   height: 20px;
+   border-radius: 90px 90px 90px 90px;
+   right: 10px;
+   bottom: 5px;
+   position: relative;
+
 }
