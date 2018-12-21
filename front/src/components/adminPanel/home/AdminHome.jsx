@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 
-import HeaderMy from '../../HomePage/HeaderMy';
+import Header from '../../homePage/Header';
 import SideMenu from './SideMenu';
 import UsersList from '../users/UsersList';
 import UsersBoughtProducts from '../users/UsersBoughtProducts';
@@ -13,11 +13,11 @@ import EditAdminProfileForm from '../profile/EditAdminProfileForm';
 
 const API = `http://localhost:5000/api/`;
 
-const Home = props => {
+const AdminHome = props => {
   const { path } = props.match;
   return (
     <>
-      <HeaderMy />
+      <Header />
       <SideMenu />
       <Link to={`${path}`}>Home</Link>
       <br />
@@ -67,4 +67,4 @@ const Home = props => {
   );
 };
 
-export default Home;
+export default AdminHome;
