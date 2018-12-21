@@ -16,8 +16,8 @@ router.route('/:id/cart').get((req, res) => {
   return res.json(user.cart);
 });
 
-// path will be /api/users/{id}/cart/add
-router.route('/:id/cart/add').post((req, res) => {
+// path will be /api/users/{id}/cart
+router.route('/:id/cart').post((req, res) => {
   const id = req.params.id;
   const usersDB = JSON.parse(fs.readFileSync('db/users.json'));
   const user = usersDB.find(user => user.id == id);

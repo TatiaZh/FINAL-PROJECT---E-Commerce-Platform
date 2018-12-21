@@ -11,8 +11,8 @@ router.route('/messages').get((req, res) => {
   return res.json(messagesDB);
 });
 
-// path will be /api/admin/messages/add
-router.route('/messages/add').post((req, res) => {
+// path will be /api/admin/messages
+router.route('/messages').post((req, res) => {
   const messagesDB = JSON.parse(fs.readFileSync('db/messages.json'));
   const id = messagesDB[messagesDB.length - 1].id + 1 || 1;
   const message = new Message({ id, ...req.body });

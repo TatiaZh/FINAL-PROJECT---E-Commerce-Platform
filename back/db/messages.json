@@ -69,17 +69,5 @@
     },
     "dateSent": "2018-01-01",
     "responded": false
-  },
-  {
-    "id": 7,
-    "title": "Test Message 7",
-    "text": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium",
-    "sender": {
-      "name": "John",
-      "surname": "Doe",
-      "email": "johndoe@example.com"
-    },
-    "dateSent": "2018-01-01",
-    "responded": false
   }
 ]

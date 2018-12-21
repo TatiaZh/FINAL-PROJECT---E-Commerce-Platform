@@ -28,20 +28,25 @@ function validateProduct(product) {
     nutritionFacts,
     enabled
   } = product;
-  if (!isString(title) || !isString(desc)) {
+  if (!isString(title)) {
     return {
-      error:
-        'product must have title/desc properties and they must be in string format'
+      error: 'product must have title property and it must be in string format'
     };
   }
-  if (!isSting(price) || !isString(stock)) {
+  if (!isString(desc)) {
+    return {
+      error: 'product must have desc property and it must be in string format'
+    };
+  }
+  if (!isString(images)) {
+    return {
+      error: 'product must have images property and it must be in string format'
+    };
+  }
+  if (!isString(price) || !isString(stock)) {
     return { error: 'product must have price and stock properties' };
   }
-  if (!(images instanceof Array)) {
-    return {
-      error: 'product must have images property and it must be in array format'
-    };
-  }
+
   if (typeof enabled !== 'boolean') {
     return {
       error:
@@ -65,6 +70,29 @@ function validateCartProduct(product) {
     };
   }
   return { productId, quantity };
+}
+
+function validateAdminUser(user) {
+  const { name, username } = user;
+  const email = user.email || '';
+  const password = user.password || '';
+  if (!isString(name) || !isString(username)) {
+    return {
+      error:
+        'user must have name/username properties and they must be in string format'
+    };
+  }
+  if (!validator.isEmail(email)) {
+    return {
+      error: 'user must have email poperty and it must be in correct format'
+    };
+  }
+  // if (!validator.isLength(password, { min: 6, max: 30 })) {
+  //   return {
+  //     error: 'password must be at least 6 and less than 30 characters long'
+  //   };
+  // }
+  return { name, username, email, password };
 }
 
 function validateUser(user) {
@@ -101,11 +129,11 @@ function validateUser(user) {
     };
   }
 
-  if (!validator.isLength(password, { min: 6, max: 30 })) {
-    return {
-      error: 'password must be at least 6 and less than 30 characters long'
-    };
-  }
+  // if (!validator.isLength(password, { min: 6, max: 30 })) {
+  //   return {
+  //     error: 'password must be at least 6 and less than 30 characters long'
+  //   };
+  // }
 
   if (
     !isString(phone) ||
@@ -199,6 +227,7 @@ function validateLogin(data) {
 module.exports = {
   validateProduct,
   validateCartProduct,
+  validateAdminUser,
   validateUser,
   validatePayment,
   validateMessage,
