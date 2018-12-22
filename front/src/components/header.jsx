@@ -22,6 +22,10 @@ class Header extends Component {
                   {" "}
                   <a href="">Blog</a>{" "}
                 </li>
+                <li>
+                  {" "}
+                  <a href="">Content</a>{" "}
+                </li>
               </ul>
             </nav>
             <div className="header__inner__logo">
