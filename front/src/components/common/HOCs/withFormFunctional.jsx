@@ -6,18 +6,20 @@ const withFormFunctional = formControls => Comp => {
   return class WithFormFunctional extends Component {
     constructor(props) {
       super(props);
-
       this.state = {
         formIsValid: false,
         formControls: formControls,
         isLoading: false,
-        error: null
+        done: false,
+        error: null,
+        data: null
       };
 
       for (let item in this.state.formControls) {
         const prop = this.state.formControls[item];
-        prop.touched = false;
-        prop.valid = false;
+
+        prop.touched = prop.touched || false;
+        prop.valid = prop.touched || false;
         if (!prop.validationRules || !prop.validationRules.isRequired) {
           prop.valid = true;
           prop.touched = true;
@@ -86,10 +88,15 @@ const withFormFunctional = formControls => Comp => {
       if (this.props.method === 'add') {
         const url = this.props.url;
         axios
-          .post(`${url}products`, body)
+          .post(url, body)
           .then(res => {
-            this.setState({ error: null });
-            setTimeout(() => this.setState({ isLoading: false }), 1000);
+            this.setState({ error: null, data: res.data });
+
+            setTimeout(
+              () => this.setState({ isLoading: false, done: true }),
+              1000
+            );
+            setTimeout(() => this.setState({ done: false }), 2000);
           })
           .catch(err => {
             this.handleErrors(err);
@@ -104,7 +111,12 @@ const withFormFunctional = formControls => Comp => {
           .then(res => {
             console.log(res);
             this.setState({ error: null });
-            setTimeout(() => this.setState({ isLoading: false }), 1000);
+
+            setTimeout(
+              () => this.setState({ isLoading: false, done: true }),
+              1000
+            );
+            setTimeout(() => this.setState({ done: false }), 2000);
           })
           .catch(err => {
             this.handleErrors(err);

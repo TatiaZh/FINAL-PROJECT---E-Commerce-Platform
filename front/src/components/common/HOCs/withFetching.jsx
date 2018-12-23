@@ -73,6 +73,7 @@ const withFetching = query => Comp => {
 
     componentDidMount() {
       this.setState({ isLoading: true });
+      console.log(`${this.props.url}${query}`);
       axios
         .get(`${this.props.url}${query}`)
         .then(result => {

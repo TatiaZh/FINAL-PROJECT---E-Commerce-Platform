@@ -57,7 +57,13 @@ const AddProductForm = props => {
   const ProductFormWithFormFunctional = withFormFunctional(formControls)(
     ProductForm
   );
-  return <ProductFormWithFormFunctional method="add" {...props} />;
+  return (
+    <ProductFormWithFormFunctional
+      method="add"
+      url={`${props.url}products`}
+      {...props}
+    />
+  );
 };
 
 export default AddProductForm;

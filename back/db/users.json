@@ -10,7 +10,7 @@
   {
     "id": 1,
     "name": "Leanne Graham",
-    "username": "Hermione",
+    "username": "sscds",
     "email": "Sincere@april.biz",
     "password": "9dae429c9cb0c73e1a9a21ce331fb4ed00db605f8aceeaf2b78801f5679f301f",
     "age": "27",
@@ -102,6 +102,19 @@
     "username": "Karianne",
     "email": "Julianne.OConner@kory.org",
     "password": "22e5cade45595a14b1badaf2e3de39918edd2e94ab50130c2130b864ca53f85b",
+    "age": "27",
+    "birthday": "1991-11-11",
+    "phone": "493-170-9623 x156",
+    "balance": "1000",
+    "boughtProducts": [],
+    "cart": []
+  },
+  {
+    "id": 5,
+    "name": "Patricia Lebsack",
+    "username": "Karianne",
+    "email": "Julianne.OConner@kory.org",
+    "password": "36caeb43bf17b70853af4c12a2caf034c57b108d6ce06717098018ab589e5595",
     "age": "27",
     "birthday": "1991-11-11",
     "phone": "493-170-9623 x156",

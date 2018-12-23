@@ -208,21 +208,21 @@ function validateMessage(message) {
   return { title, text, sender, dateSent };
 }
 
-function validateLogin(data) {
-  const email = data.email || '';
-  const password = data.password || '';
-  if (!validator.isEmail(email)) {
-    return {
-      error: 'login must have email poperty in correct format'
-    };
-  }
-  if (!validator.isLength(password, { min: 6, max: 30 })) {
-    return {
-      error: 'password must be at least 6 and less than 30 characters long'
-    };
-  }
-  return { email, password };
-}
+// function validateLogin(data) {
+//   const email = data.usrname || '';
+//   const password = data.password || '';
+//   if (!validator.isEmail(email)) {
+//     return {
+//       error: 'login must have email poperty in correct format'
+//     };
+//   }
+//   if (!validator.isLength(password, { min: 6, max: 30 })) {
+//     return {
+//       error: 'password must be at least 6 and less than 30 characters long'
+//     };
+//   }
+//   return { email, password };
+// }
 
 module.exports = {
   validateProduct,
@@ -230,6 +230,6 @@ module.exports = {
   validateAdminUser,
   validateUser,
   validatePayment,
-  validateMessage,
-  validateLogin
+  validateMessage
+  // validateLogin
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 
-import Header from '../../homePage/Header';
+import Header from '../../common/Header';
 import SideMenu from './SideMenu';
 import UsersList from '../users/UsersList';
 import UsersBoughtProducts from '../users/UsersBoughtProducts';
@@ -10,6 +10,7 @@ import EditProductForm from '../products/EditProductForm';
 import Messages from '../messages/Messages';
 import AdminProfile from '../profile/AdminProfile';
 import EditAdminProfileForm from '../profile/EditAdminProfileForm';
+import ProductList from '../../shop/ProductList';
 
 const API = `http://localhost:5000/api/`;
 
@@ -42,11 +43,17 @@ const AdminHome = props => {
         render={props => <UsersBoughtProducts {...props} url={API} />}
       />
       <Route
-        path={`${path}/products/add`}
-        render={props => <AddProductForm {...props} url={API} />}
+        path={`${path}/products`}
+        exact
+        render={props => <ProductList editable={true} />}
       />
       <Route
-        path={`${path}/products/edit/:id`}
+        path={`${path}/products/add`}
+        render={props => <AddProductForm {...props} url={`${API}products`} />}
+      />
+      <Route
+        path={`${path}/products/:id/edit`}
+        exact
         render={props => <EditProductForm {...props} url={`${API}products`} />}
       />
       <Route

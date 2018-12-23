@@ -7,6 +7,7 @@ const ProductForm = ({
   formIsValid,
   formControls,
   isLoading,
+  done,
   error,
   method,
   handleChange,
@@ -80,6 +81,8 @@ const ProductForm = ({
         <button type="submit" disabled={!formIsValid}>
           {isLoading ? (
             <FontAwesomeIcon icon="spinner" spin />
+          ) : done ? (
+            <FontAwesomeIcon icon="check" />
           ) : method === 'add' ? (
             'Add'
           ) : (

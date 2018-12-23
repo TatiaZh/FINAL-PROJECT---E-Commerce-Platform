@@ -1,7 +1,7 @@
 import React from 'react';
 // import { Route, Link } from 'react-router-dom';
 
-import Header from './Header';
+import Header from '../common/Header';
 import Body from './MainBody';
 
 const MainHome = props => {
