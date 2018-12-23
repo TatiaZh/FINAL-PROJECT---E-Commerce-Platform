@@ -3,7 +3,7 @@ import React from 'react';
 const TextInput = props => {
   let formControl = 'form-control';
   // props.touched &&
-  if (!props.valid) {
+  if (props.touched && !props.valid) {
     formControl = 'form-control control-error';
   }
 

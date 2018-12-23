@@ -51,21 +51,16 @@ router.route('/register').post((req, res) => {
 
 // path will be /api/users/login
 router.route('/login').post((req, res) => {
-  const data = validateLogin(req.body);
-  if (data.error) {
-    return res.status(400).json({ message: data.error });
-  }
-
   let usersDB = JSON.parse(fs.readFileSync('db/users.json'));
 
-  let { email, password } = data;
+  let { username, password } = req.body;
   password = encrypt(password);
   const user = usersDB.find(
-    user => user.email === email && user.password === password
+    user => user.username === username && user.password === password
   );
 
   if (!user) {
-    return res.status(404).json({ message: 'incorrect email or password' });
+    return res.status(404).json({ message: 'incorrect username or password' });
   }
 
   return res.json(user);

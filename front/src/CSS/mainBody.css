@@ -80,18 +80,18 @@
 .content-div {
   width: 49%;
 }
-.moto-div{
+.moto-div {
   margin-right: auto;
 }
 .moto-div > span {
   font-size: 80px;
-  letter-spacing: .01em;
+  letter-spacing: 0.01em;
   line-height: 1.4em;
   font-weight: 100;
 }
 .content-div > p {
   color: grey;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
   line-height: 1.8em;
   font-size: 18px;
   word-wrap: break-word;
@@ -121,7 +121,7 @@
   background-repeat: no-repeat;
 } */
 
-.main-content__section-2 > img{
+.main-content__section-2 > img {
   width: 30%;
   padding: 25px;
 }
@@ -199,7 +199,7 @@
 .main-content-2__section-2__img-2 {
   background-image: url('../images/pickles-blog-pepper-on-blue-square.jpeg');
 } */
-.main-content-2__section-2 > img{
+.main-content-2__section-2 > img {
   padding: 20px;
   max-width: 100%;
   height: auto;

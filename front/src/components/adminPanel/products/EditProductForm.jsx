@@ -39,6 +39,7 @@ class EditProductForm extends Component {
       title: {
         value: product.title,
         placeholder: 'Title',
+        touched: true,
         validationRules: {
           isRequired: true
         }
@@ -46,6 +47,7 @@ class EditProductForm extends Component {
       desc: {
         value: product.desc,
         placeholder: 'Description',
+        touched: true,
         validationRules: {
           maxLength: 250,
           isRequired: true
@@ -54,6 +56,7 @@ class EditProductForm extends Component {
       price: {
         value: product.price,
         placeholder: 'Price',
+        touched: true,
         validationRules: {
           format: /^[0-9]*\.?[0-9]+$/,
           isRequired: true
@@ -62,6 +65,7 @@ class EditProductForm extends Component {
       images: {
         value: product.images,
         placeholder: 'URLs',
+        touched: true,
         validationRules: {
           isRequired: true
         }
@@ -69,6 +73,7 @@ class EditProductForm extends Component {
       stock: {
         value: product.stock,
         placeholder: 'Stock',
+        touched: true,
         validationRules: {
           format: /^[0-9]+$/,
           isRequired: true
