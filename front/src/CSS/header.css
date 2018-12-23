@@ -6,8 +6,7 @@ header {
 
 }
 .header__inner--wrapper{
-   padding-left: 70px;
-   padding-right: 70px;
+  
    width: 90%;
    max-width: 1800px;
 }

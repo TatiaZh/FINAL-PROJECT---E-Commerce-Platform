@@ -40,20 +40,12 @@ class MainBody extends Component {
             </div>
 
             <div className="main-content__section-2">
-              <img
-                src="../images/pickles-blog-beet-on-pink-square.jpeg"
-                alt=""
-              />
-              <div className="main-content__section-2__img-1" />
-              <div className="main-content__section-2__img-2" />
-              <div className="main-content__section-2__img-3" />
+              
+              <img src={ require('../images//pickles-blog-beet-on-pink-square.jpeg')} alt=""/>
+              <img src={ require('../images//pickles-blog-cucumber-on-green.jpeg')} alt=""/>
+              <img src={ require('../images//pickles-blog-lemon-on-blue-square.jpeg')} alt=""/>
 
-              <img src="../images/pickles-blog-cucumber-on-green.jpeg" alt="" />
-
-              <img
-                src="../images/pickles-blog-lemon-on-blue-square.jpeg"
-                alt=""
-              />
+              
             </div>
 
             <div className="main-content__section-3">
@@ -132,9 +124,8 @@ class MainBody extends Component {
             </div>
 
             <div className="main-content-2__section-2">
-              <div className="main-content-2__section-2__img-1" />
-
-              <div className="main-content-2__section-2__img-2" />
+              <img src={ require("../images/pickles-blog-carrot-on-pink-square.jpeg")} alt=""/>
+              <img src={require("../images/pickles-blog-pepper-on-blue-square.jpeg")} alt=""/>
             </div>
           </div>
         </div>
