@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../CSS/footer.css";
+import "../../CSS/footer.css";
 
 class Footer extends Component {
   render() {
@@ -18,17 +18,20 @@ class Footer extends Component {
             </div>
           </div>
 
-
-          <div className="footer-nav__div"> 
+          <div className="footer-nav__div">
+            <div>
               <a href="">STOCKISTS</a>
               <a href="">FAQ</a>
               <a href="">PRIVACY</a>
+            </div>
+            <div>
               <a href="">TERMS OF USE</a>
               <a href="">CONTACT</a>
+            </div>
           </div>
-          <div className="footer-bot__div"> 
-              <span>Powered By</span>
-              <a href="">Nova</a>
+          <div className="footer-bot__div">
+            <span>Powered By</span>
+            <a href="">Nova</a>
           </div>
         </div>
       </footer>
