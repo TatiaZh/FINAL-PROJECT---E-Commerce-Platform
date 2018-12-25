@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import '../../CSS/mainBody.css';
 
 class MainBody extends Component {

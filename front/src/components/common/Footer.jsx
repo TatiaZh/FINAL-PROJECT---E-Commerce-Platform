@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../../CSS/footer.css';
 
 class Footer extends Component {
@@ -8,26 +9,25 @@ class Footer extends Component {
         <div className="footer--wrapper">
           <div className="footer-top__div">
             <div>
-              <a href="#" className="fa fa-facebook" />
+              <a href="https://facebook.com" className="fa fa-facebook" />
             </div>
             <div>
-              <a href="#" className="fa fa-instagram" />
+              <a href="http://instagram.com" className="fa fa-instagram" />
             </div>
             <div>
-              <a href="#" className="fa fa-twitter" />
+              <a href="http://twitter.com" className="fa fa-twitter" />
             </div>
           </div>
 
           <div className="footer-nav__div">
-            <a href="">STOCKISTS</a>
-            <a href="">FAQ</a>
-            <a href="">PRIVACY</a>
-            <a href="">TERMS OF USE</a>
-            <a href="">CONTACT</a>
+            <Link to="/stockists">STOCKISTS</Link>
+            <Link to="/faq">FAQ</Link>
+            <Link to="/privacy">PRIVACY</Link>
+            <Link to="/terms-of-use">TERMS OF USE</Link>
           </div>
           <div className="footer-bot__div">
             <span>Powered By</span>
-            <a href="">Nova</a>
+            <a href="http://techub.ge/">Techub</a>
           </div>
         </div>
       </footer>

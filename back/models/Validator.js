@@ -174,8 +174,7 @@ function validatePayment(data) {
 }
 
 function validateMessage(message) {
-  const { title, text, sender, dateSent } = message;
-  const { name, surname, email } = sender;
+  const { title, text, dateSent, name, surname, email } = message;
 
   if (!isString(title) || !isString(text)) {
     return {
@@ -205,7 +204,7 @@ function validateMessage(message) {
     };
   }
 
-  return { title, text, sender, dateSent };
+  return { title, text, name, surname, email, dateSent };
 }
 
 // function validateLogin(data) {
