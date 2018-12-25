@@ -5,7 +5,6 @@ import PasswordInput from './inputs/PasswordInput';
 import Header from '../common/Header';
 
 import '../../CSS/login.css';
-import icon from '../../images/login-icon.png';
 
 const LoginForm = ({
   formIsValid,
@@ -28,7 +27,11 @@ const LoginForm = ({
       <div className="form-wrapper">
         <h1 className="form-title">Welcome</h1>
         <div className="login-icon">
-          <img src={icon} alt="icon" className="login-icon--image" />
+          <img
+            src={'../../images/login-icon.png'}
+            alt="icon"
+            className="login-icon--image"
+          />
         </div>
         {error ? <p className="form-error">{error}</p> : null}
         <form

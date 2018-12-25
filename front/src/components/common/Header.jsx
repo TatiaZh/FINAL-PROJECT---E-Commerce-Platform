@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../../CSS/header.css';
-import Logo from '../../images/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Header extends Component {
@@ -46,7 +45,7 @@ class Header extends Component {
               </ul>
             </nav>
             <div className="header__inner__logo">
-              <img src={Logo} alt="BRINE" />
+              <img src={'../../images/logo.png'} alt="BRINE" />
             </div>
             <div className="header__inner__cart-login">
               <div className="header__inner__cart">
