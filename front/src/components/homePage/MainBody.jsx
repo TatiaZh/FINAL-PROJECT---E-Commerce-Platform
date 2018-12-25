@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../../CSS/mainBody.css';
 
 class MainBody extends Component {
@@ -12,7 +13,11 @@ class MainBody extends Component {
               <br />
               <span>No. 1</span>
               <div className="shop__button">
-                <h3>Shop Now</h3>
+                <h3>
+                  <Link to="/shop" className="shop_button--text">
+                    Shop Now
+                  </Link>
+                </h3>
               </div>
             </div>
           </div>
@@ -40,12 +45,18 @@ class MainBody extends Component {
             </div>
 
             <div className="main-content__section-2">
-              
-              <img src={ require('../images//pickles-blog-beet-on-pink-square.jpeg')} alt=""/>
-              <img src={ require('../images//pickles-blog-cucumber-on-green.jpeg')} alt=""/>
-              <img src={ require('../images//pickles-blog-lemon-on-blue-square.jpeg')} alt=""/>
-
-              
+              <img
+                src={require('../../images/pickles-blog-beet-on-pink-square.jpeg')}
+                alt=""
+              />
+              <img
+                src={require('../../images/pickles-blog-cucumber-on-green.jpeg')}
+                alt=""
+              />
+              <img
+                src={require('../../images/pickles-blog-lemon-on-blue-square.jpeg')}
+                alt=""
+              />
             </div>
 
             <div className="main-content__section-3">
@@ -76,7 +87,11 @@ class MainBody extends Component {
               <span>Batch :</span>
               <span>No. 2</span>
               <div className="shop__button shop__button__section-2">
-                <h3>Shop Now</h3>
+                <h3>
+                  <Link to="/shop" className="shop_button--text">
+                    Shop Now
+                  </Link>
+                </h3>
               </div>
             </div>
           </div>
@@ -93,7 +108,11 @@ class MainBody extends Component {
               <span>Batch</span>
               <span>No. 3</span>
               <div className="shop__button">
-                <h3>Shop Now</h3>
+                <h3>
+                  <Link to="/shop" className="shop_button--text">
+                    Shop Now
+                  </Link>
+                </h3>
               </div>
             </div>
           </div>
@@ -124,8 +143,14 @@ class MainBody extends Component {
             </div>
 
             <div className="main-content-2__section-2">
-              <img src={ require("../images/pickles-blog-carrot-on-pink-square.jpeg")} alt=""/>
-              <img src={require("../images/pickles-blog-pepper-on-blue-square.jpeg")} alt=""/>
+              <img
+                src={require('../../images/pickles-blog-carrot-on-pink-square.jpeg')}
+                alt=""
+              />
+              <img
+                src={require('../../images/pickles-blog-pepper-on-blue-square.jpeg')}
+                alt=""
+              />
             </div>
           </div>
         </div>

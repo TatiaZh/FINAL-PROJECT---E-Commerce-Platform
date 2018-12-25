@@ -40,6 +40,9 @@ class Header extends Component {
                 <li>
                   <Link to={`/blog`}>Blog</Link>
                 </li>
+                <li>
+                  <Link to={`/contact`}>Contact</Link>
+                </li>
               </ul>
             </nav>
             <div className="header__inner__logo">

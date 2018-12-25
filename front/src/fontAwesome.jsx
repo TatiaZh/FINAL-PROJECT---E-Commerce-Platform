@@ -9,6 +9,11 @@ import {
   faSignOutAlt,
   faSignInAlt
 } from '@fortawesome/free-solid-svg-icons';
+import {
+  faFacebook,
+  faTwitter,
+  faPinterest
+} from '@fortawesome/free-brands-svg-icons';
 
 library.add(
   faEdit,
@@ -18,5 +23,8 @@ library.add(
   faCheck,
   faUser,
   faSignOutAlt,
-  faSignInAlt
+  faSignInAlt,
+  faFacebook,
+  faTwitter,
+  faPinterest
 );

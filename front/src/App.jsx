@@ -2,15 +2,19 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import ProtectedUserRoute from './components/routes/ProtectedUserRoute';
+import ProtectedAdminRoute from './components/routes/ProtectedAdminRoute';
 
 import AdminHome from './components/adminPanel/home/AdminHome';
 import MainHome from './components/homePage/MainHome';
 import ShopMain from './components/shop/ShopMain';
 import Login from './components/common/Login';
 import UserProfile from './components/user/UserProfile';
+import Contact from './components/contact/Contact';
+import ShowArticle from './components/blog/Show';
+import Blog from './components/blog/Blog';
+
 import './App.css';
 import './fontAwesome';
-import ProtectedAdminRoute from './components/routes/ProtectedAdminRoute';
 
 const API = `http://localhost:5000/api/`;
 
@@ -36,9 +40,14 @@ class App extends Component {
           <div className="App">
             <Route path="/" exact render={props => <MainHome {...props} />} />
             <ProtectedAdminRoute path="/admin" component={AdminHome} />
-            {/* <ProtectedUserRoute path="/admin" component={AdminHome} /> */}
-            {/* <Route path="/admin" render={props => <AdminHome {...props} />} /> */}
             <Route path="/shop" render={props => <ShopMain {...props} />} />
+
+            <Route path="/contact" render={props => <Contact {...props} />} />
+            <Route
+              path="/article"
+              render={props => <ShowArticle {...props} />}
+            />
+            <Route path="/blog" render={props => <Blog {...props} />} />
             <Route
               path="/login"
               render={props => <Login {...props} url={`${API}users/login`} />}

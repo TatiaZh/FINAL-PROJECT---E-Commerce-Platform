@@ -6,6 +6,10 @@ export default class Product extends Component {
     const { id, title, images, price } = this.props.item;
     const { onProductClick, editable } = this.props;
     const imagesArr = images.split(',');
+    if (!imagesArr) {
+      return <p>Loading...</p>;
+    }
+    console.log(`../${imagesArr[0]}`);
     return (
       <>
         <div
@@ -18,13 +22,13 @@ export default class Product extends Component {
           <img
             className="main--container--product--image "
             id="first--img"
-            src={imagesArr[0]}
+            src={`../${imagesArr[0]}`}
             alt="sdv"
           />
           <img
             className="main--container--product--image display--none"
             id="hover--img"
-            src={imagesArr[1]}
+            src={`../${imagesArr[1]}`}
             alt="sdv"
           />
 

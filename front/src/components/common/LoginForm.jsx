@@ -30,7 +30,7 @@ const LoginForm = ({
         <div className="login-icon">
           <img src={icon} alt="icon" className="login-icon--image" />
         </div>
-        {error ? <p className="error">{error}</p> : null}
+        {error ? <p className="form-error">{error}</p> : null}
         <form
           onSubmit={handleSubmit}
           className="form-container form-container--login"

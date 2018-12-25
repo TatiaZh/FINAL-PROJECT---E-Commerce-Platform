@@ -50,6 +50,9 @@
   color: #fff;
   transition: 0.3s;
 }
+.shop_button--text {
+  color: #fff;
+}
 .shop__button > h3 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.402);
 }
@@ -201,7 +204,7 @@
 } */
 .main-content-2__section-2 > img {
   padding: 20px;
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
 }
 

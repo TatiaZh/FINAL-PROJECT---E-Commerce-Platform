@@ -32,9 +32,12 @@ class Productdetails extends Component {
             </form>
             <button className="addToCart--button">ADD TO CART</button>
             <div className="product--details--text--icons">
-              <i className="fab fa-facebook-f" />
-              <i className="fab fa-twitter" />
-              <i className="fab fa-pinterest" />
+              {
+                /* <FontAwesomeIcon icon="facebook" />
+              <FontAwesomeIcon icon="twitter" />
+              <FontAwesomeIcon icon="pinterest" /> */
+                // TO BE FIXED
+              }
             </div>
           </div>
 
