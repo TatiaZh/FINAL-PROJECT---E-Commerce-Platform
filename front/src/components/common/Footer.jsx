@@ -1,0 +1,38 @@
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import '../../CSS/footer.css';
+
+class Footer extends Component {
+  render() {
+    return (
+      <footer>
+        <div className="footer--wrapper">
+          <div className="footer-top__div">
+            <div>
+              <a href="https://facebook.com" className="fa fa-facebook" />
+            </div>
+            <div>
+              <a href="http://instagram.com" className="fa fa-instagram" />
+            </div>
+            <div>
+              <a href="http://twitter.com" className="fa fa-twitter" />
+            </div>
+          </div>
+
+          <div className="footer-nav__div">
+            <Link to="/stockists">STOCKISTS</Link>
+            <Link to="/faq">FAQ</Link>
+            <Link to="/privacy">PRIVACY</Link>
+            <Link to="/terms-of-use">TERMS OF USE</Link>
+          </div>
+          <div className="footer-bot__div">
+            <span>Powered By</span>
+            <a href="http://techub.ge/">Techub</a>
+          </div>
+        </div>
+      </footer>
+    );
+  }
+}
+
+export default Footer;

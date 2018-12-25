@@ -28,20 +28,25 @@ function validateProduct(product) {
     nutritionFacts,
     enabled
   } = product;
-  if (!isString(title) || !isString(desc)) {
+  if (!isString(title)) {
     return {
-      error:
-        'product must have title/desc properties and they must be in string format'
+      error: 'product must have title property and it must be in string format'
     };
   }
-  if (!isSting(price) || !isString(stock)) {
+  if (!isString(desc)) {
+    return {
+      error: 'product must have desc property and it must be in string format'
+    };
+  }
+  if (!isString(images)) {
+    return {
+      error: 'product must have images property and it must be in string format'
+    };
+  }
+  if (!isString(price) || !isString(stock)) {
     return { error: 'product must have price and stock properties' };
   }
-  if (!(images instanceof Array)) {
-    return {
-      error: 'product must have images property and it must be in array format'
-    };
-  }
+
   if (typeof enabled !== 'boolean') {
     return {
       error:
@@ -49,6 +54,45 @@ function validateProduct(product) {
     };
   }
   return { title, desc, price, images, stock, nutritionFacts, enabled };
+}
+
+function validateCartProduct(product) {
+  const { productId, quantity } = product;
+  if (!isString(productId)) {
+    return {
+      error: 'product must have id property and it must be in string format'
+    };
+  }
+  if (!isString(quantity)) {
+    return {
+      error:
+        'product must have quantity property and it must be in string format'
+    };
+  }
+  return { productId, quantity };
+}
+
+function validateAdminUser(user) {
+  const { name, username } = user;
+  const email = user.email || '';
+  const password = user.password || '';
+  if (!isString(name) || !isString(username)) {
+    return {
+      error:
+        'user must have name/username properties and they must be in string format'
+    };
+  }
+  if (!validator.isEmail(email)) {
+    return {
+      error: 'user must have email poperty and it must be in correct format'
+    };
+  }
+  // if (!validator.isLength(password, { min: 6, max: 30 })) {
+  //   return {
+  //     error: 'password must be at least 6 and less than 30 characters long'
+  //   };
+  // }
+  return { name, username, email, password };
 }
 
 function validateUser(user) {
@@ -85,11 +129,11 @@ function validateUser(user) {
     };
   }
 
-  if (!validator.isLength(password, { min: 6, max: 30 })) {
-    return {
-      error: 'password must be at least 6 and less than 30 characters long'
-    };
-  }
+  // if (!validator.isLength(password, { min: 6, max: 30 })) {
+  //   return {
+  //     error: 'password must be at least 6 and less than 30 characters long'
+  //   };
+  // }
 
   if (
     !isString(phone) ||
@@ -108,9 +152,29 @@ function validateUser(user) {
   return { name, username, email, password, age, birthday, address, phone };
 }
 
+function validatePayment(data) {
+  const { balance, products } = data;
+  if (!isString(balance)) {
+    return {
+      error:
+        'payment must have balance property and it must be in string format'
+    };
+  }
+  if (!(products instanceof Array)) {
+    return {
+      error:
+        'payment must have products property and it must be in array format'
+    };
+  }
+  for (prod of products) {
+    const res = validateCartProduct(prod);
+  }
+
+  return { balance, products };
+}
+
 function validateMessage(message) {
-  const { title, text, sender, dateSent } = message;
-  const { name, surname, email } = sender;
+  const { title, text, dateSent, name, surname, email } = message;
 
   if (!isString(title) || !isString(text)) {
     return {
@@ -140,28 +204,31 @@ function validateMessage(message) {
     };
   }
 
-  return { title, text, sender, dateSent };
+  return { title, text, name, surname, email, dateSent };
 }
 
-function validateLogin(data) {
-  const email = data.email || '';
-  const password = data.password || '';
-  if (!validator.isEmail(email)) {
-    return {
-      error: 'login must have email poperty in correct format'
-    };
-  }
-  if (!validator.isLength(password, { min: 6, max: 30 })) {
-    return {
-      error: 'password must be at least 6 and less than 30 characters long'
-    };
-  }
-  return { email, password };
-}
+// function validateLogin(data) {
+//   const email = data.usrname || '';
+//   const password = data.password || '';
+//   if (!validator.isEmail(email)) {
+//     return {
+//       error: 'login must have email poperty in correct format'
+//     };
+//   }
+//   if (!validator.isLength(password, { min: 6, max: 30 })) {
+//     return {
+//       error: 'password must be at least 6 and less than 30 characters long'
+//     };
+//   }
+//   return { email, password };
+// }
 
 module.exports = {
   validateProduct,
+  validateCartProduct,
+  validateAdminUser,
   validateUser,
-  validateMessage,
-  validateLogin
+  validatePayment,
+  validateMessage
+  // validateLogin
 };

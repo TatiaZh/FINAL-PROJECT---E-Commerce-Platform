@@ -1,19 +1,39 @@
 [
   {
+    "id": 0,
+    "name": "Admin Someone",
+    "username": "admin",
+    "email": "admin@admin.com",
+    "password": "1026e264ea829674d50a4918f7fb88d0c978753f415357416ecbf8cd0ae19fed",
+    "isAdmin": true
+  },
+  {
     "id": 1,
     "name": "Leanne Graham",
-    "username": "Bret",
+    "username": "Hermione",
     "email": "Sincere@april.biz",
     "password": "9dae429c9cb0c73e1a9a21ce331fb4ed00db605f8aceeaf2b78801f5679f301f",
     "age": "27",
     "birthday": "1991-11-11",
     "phone": "1-770-736-8031 x56442",
     "balance": "1000",
-    "broughtProducts": ["product1", "product2"],
-    "cart": {
-      "active": true,
-      "products": ["product1, product2"]
-    }
+    "boughtProducts": [
+      {
+        "id": "1",
+        "quantity": "1",
+        "title": "Product 1"
+      }
+    ],
+    "cart": [
+      {
+        "id": "1",
+        "quantity": "1"
+      },
+      {
+        "id": "2",
+        "quantity": "3"
+      }
+    ]
   },
   {
     "id": 2,
@@ -25,42 +45,81 @@
     "birthday": "1991-11-11",
     "phone": "010-692-6593 x09125",
     "balance": "1000",
-    "broughtProducts": ["product1", "product2"],
-    "cart": {
-      "active": true,
-      "products": ["product1", "product2", "product3"]
-    }
+    "boughtProducts": [
+      {
+        "id": "1",
+        "quantity": "1",
+        "title": "Product 1"
+      },
+      {
+        "id": "2",
+        "quantity": "1",
+        "title": "Product 2"
+      }
+    ],
+    "cart": [
+      {
+        "id": "1",
+        "quantity": "1"
+      },
+      {
+        "id": "2",
+        "quantity": "1"
+      },
+      {
+        "id": "3",
+        "quantity": "1"
+      }
+    ]
   },
   {
     "id": 3,
     "name": "Clementine Bauch",
-    "username": "Samantha",
+    "username": "Tatia",
     "email": "Nathan@yesenia.net",
     "password": "22e5cade45595a14b1badaf2e3de39918edd2e94ab50130c2130b864ca53f85b",
     "age": "27",
     "birthday": "1991-11-11",
     "phone": "1-463-123-4447",
     "balance": "1000",
-    "broughtProducts": ["product1", "product2"],
-    "cart": {
-      "active": false,
-      "products": []
-    }
+    "boughtProducts": [
+      {
+        "id": "1",
+        "quantity": "1",
+        "title": "Product 1"
+      },
+      {
+        "id": "2",
+        "quantity": "1",
+        "title": "Product 2"
+      }
+    ],
+    "cart": []
   },
   {
     "id": 4,
     "name": "Patricia Lebsack",
     "username": "Karianne",
     "email": "Julianne.OConner@kory.org",
-    "password": "cd73971f7b0691acc6c1a8962b4837bff9c2956e66e865c28510f6c56f246b43",
+    "password": "22e5cade45595a14b1badaf2e3de39918edd2e94ab50130c2130b864ca53f85b",
     "age": "27",
     "birthday": "1991-11-11",
     "phone": "493-170-9623 x156",
-    "balance": "0",
-    "broughtProducts": [],
-    "cart": {
-      "active": false,
-      "products": []
-    }
+    "balance": "1000",
+    "boughtProducts": [],
+    "cart": []
+  },
+  {
+    "id": 5,
+    "name": "Patricia Lebsack",
+    "username": "Karianne",
+    "email": "Julianne.OConner@kory.org",
+    "password": "36caeb43bf17b70853af4c12a2caf034c57b108d6ce06717098018ab589e5595",
+    "age": "27",
+    "birthday": "1991-11-11",
+    "phone": "493-170-9623 x156",
+    "balance": "1000",
+    "boughtProducts": [],
+    "cart": []
   }
 ]
