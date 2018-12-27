@@ -45,21 +45,25 @@ class EditAdminProfileForm extends Component {
         validationRules: {
           format: /^[a-zA-Z][a-zA-Z\s]*$/,
           isRequired: true
-        }
+        },
+        touched: true
       },
       username: {
         value: user.username,
         placeholder: 'Username',
         validationRules: {
           isRequired: true
-        }
+        },
+        touched: true
       },
       email: {
         value: user.email,
         placeholder: 'Email',
         validationRules: {
-          format: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        }
+          format: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+          isRequired: true
+        },
+        touched: true
       },
       oldPassword: {
         value: '',

@@ -1,11 +1,9 @@
 import React from 'react';
 import ContactForm from './ContactForm';
-import Header from '../common/Header';
 import '../../CSS/Contact.css';
 
 const contact = () => (
   <>
-    <Header />
     <div className="contact">
       <div className="contact__inner">
         <h1 className="contact__inner__title">Contact</h1>

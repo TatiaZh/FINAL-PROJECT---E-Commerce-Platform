@@ -109,7 +109,6 @@ const withFormFunctional = formControls => Comp => {
         axios
           .put(url, body)
           .then(res => {
-            console.log(res);
             this.setState({ error: null });
 
             setTimeout(

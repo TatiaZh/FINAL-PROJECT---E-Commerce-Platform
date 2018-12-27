@@ -39,10 +39,9 @@ export default class ProductList extends Component {
 
   render() {
     let { items, itemClicked } = this.state;
-    console.log(this.props.editable);
+
     return (
       <>
-        {/* <Header /> */}
         <main>
           <div className="main--container">
             {items.map(item => {
@@ -60,6 +59,7 @@ export default class ProductList extends Component {
                       item={item}
                       onProductClick={this.onProductClick}
                       editable={this.props.editable}
+                      URLtoEdit={this.props.URLtoEdit}
                     />
                   )}
                 </div>

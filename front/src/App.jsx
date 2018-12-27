@@ -12,6 +12,8 @@ import UserProfile from './components/user/UserProfile';
 import Contact from './components/contact/Contact';
 import ShowArticle from './components/blog/Show';
 import Blog from './components/blog/Blog';
+import Header from './components/common/Header';
+import Footer from './components/common/Footer';
 
 import './App.css';
 import './fontAwesome';
@@ -38,8 +40,10 @@ class App extends Component {
       <Router>
         <>
           <div className="App">
+            <Header />
             <Route path="/" exact render={props => <MainHome {...props} />} />
             <ProtectedAdminRoute path="/admin" component={AdminHome} />
+            {/* <Route path="/admin" render={props => <AdminHome {...props} />} /> */}
             <Route path="/shop" render={props => <ShopMain {...props} />} />
 
             <Route path="/contact" render={props => <Contact {...props} />} />
@@ -58,6 +62,7 @@ class App extends Component {
               component={UserProfile}
               url={url}
             />
+            <Footer />
           </div>
         </>
       </Router>

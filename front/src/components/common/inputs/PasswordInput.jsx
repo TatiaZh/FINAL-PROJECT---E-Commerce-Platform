@@ -1,12 +1,13 @@
 import React from 'react';
 
 const TextInput = props => {
-  let formControl = 'form-control';
+  let formControl = props.className;
+
   if (props.touched && !props.valid) {
-    formControl = 'form-control control-error';
+    formControl = `${props.className} control-error`;
   }
 
-  const { touched, valid, ...inputprops } = props;
+  const { touched, valid, className, ...inputprops } = props;
 
   return <input type="password" className={formControl} {...inputprops} />;
 };

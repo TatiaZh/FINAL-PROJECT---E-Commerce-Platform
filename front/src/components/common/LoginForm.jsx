@@ -1,8 +1,7 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import TextInput from './inputs/TextInput';
 import PasswordInput from './inputs/PasswordInput';
-import Header from '../common/Header';
 
 import '../../CSS/login.css';
 
@@ -23,7 +22,6 @@ const LoginForm = ({
 
   return (
     <>
-      <Header />
       <div className="form-wrapper">
         <h1 className="form-title">Welcome</h1>
         <div className="login-icon">
@@ -33,7 +31,7 @@ const LoginForm = ({
             className="login-icon--image"
           />
         </div>
-        {error ? <p className="form-error">{error}</p> : null}
+        {error ? <p className="error login-error">{error}</p> : null}
         <form
           onSubmit={handleSubmit}
           className="form-container form-container--login"
@@ -65,6 +63,12 @@ const LoginForm = ({
           >
             Login
           </button>
+          <p>
+            Don't have an account?{' '}
+            <Link to="/register" className="link">
+              Register.
+            </Link>
+          </p>
         </form>
         {localStorage.user && (
           <Redirect to={`/users/${JSON.parse(localStorage.user).id}/profile`} />

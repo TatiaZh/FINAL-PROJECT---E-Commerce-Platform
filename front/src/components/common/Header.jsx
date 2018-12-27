@@ -25,33 +25,48 @@ class Header extends Component {
   render() {
     const { user, isLoading } = this.state;
     return (
-      <header>
+      <header className="header">
         <div className="header__inner--wrapper">
           <div className="header__inner">
-            <nav>
-              <ul>
-                <li>
-                  <Link to={`/`}>Home</Link>
+            <nav className="nav">
+              <ul className="nav__ul">
+                <li className="nav__ul__item">
+                  <Link to={`/`} className="nav__ul__item__link">
+                    Home
+                  </Link>
                 </li>
                 <li>
-                  <Link to={`/shop`}>Shop</Link>
+                  <Link to={`/shop`} className="nav__ul__item__link">
+                    Shop
+                  </Link>
                 </li>
                 <li>
-                  <Link to={`/blog`}>Blog</Link>
+                  <Link to={`/blog`} className="nav__ul__item__link">
+                    Blog
+                  </Link>
                 </li>
                 <li>
-                  <Link to={`/contact`}>Contact</Link>
+                  <Link to={`/contact`} className="nav__ul__item__link">
+                    Contact
+                  </Link>
                 </li>
               </ul>
             </nav>
             <div className="header__inner__logo">
-              <img src={'../../images/logo.png'} alt="BRINE" />
+              <img
+                src={'../../images/logo.png'}
+                alt="BRINE"
+                className="header__inner__logo--img"
+              />
             </div>
             <div className="header__inner__cart-login">
-              <div className="header__inner__cart">
-                <i className="fa fa-shopping-cart" />
-                <span className="item-count__div">0</span>
-              </div>
+              {user && !user.isAdmin ? (
+                <div className="header__inner__cart">
+                  <i className="fa fa-shopping-cart" />
+
+                  <span className="item-count__div">0</span>
+                </div>
+              ) : null}
               <div className="header__inner__login-controls">
                 {isLoading ? (
                   <FontAwesomeIcon icon="spinner" spin />
@@ -93,14 +108,12 @@ class Header extends Component {
                   )
                 ) : (
                   <div>
-                    <Link to={`/login`}>
-                      <div className="sign-in-out-block">
-                        <FontAwesomeIcon
-                          icon="sign-in-alt"
-                          className="sign-out-icon"
-                        />
-                        <span className="sign-in">Sign in</span>
-                      </div>
+                    <Link to={`/login`} className="sign-in-out-block">
+                      <FontAwesomeIcon
+                        icon="sign-in-alt"
+                        className="sign-out-icon"
+                      />
+                      <span className="sign-in">Sign in</span>
                     </Link>
                   </div>
                 )}

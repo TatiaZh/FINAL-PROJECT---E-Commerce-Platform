@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import TextInput from './TextInput';
 import validate from '../validation';
 
 class EditableCell extends Component {
@@ -45,28 +44,34 @@ class EditableCell extends Component {
   }
 
   render() {
-    const { item, value, name } = this.props;
+    const { item, value, name, className } = this.props;
     return this.state.inEditing ? (
-      <>
-        <TextInput
+      <div className="editable-cell__input-wrapper">
+        <input
           defaultValue={value}
           onChange={e => this.handleOnChange(e)}
           onKeyUp={e => this.handleOnKeyUp(e, item.id, this.state.value, name)}
-          valid={this.state.valid}
-          touched={true}
+          // valid={this.state.valid}
+          // touched={true}
+          className="editable-cell__input"
         />
 
         <FontAwesomeIcon
           icon="check-circle"
-          className="icon"
+          className={`icon ${className}`}
           onClick={() => this.onEditSave(item.id, this.state.value, name)}
         />
-      </>
+      </div>
     ) : (
-      <>
-        {value}
-        <FontAwesomeIcon icon="edit" className="icon" onClick={this.onEdit} />
-      </>
+      <div className="editable-cell__input-wrapper">
+        <span>{value}</span>
+
+        <FontAwesomeIcon
+          icon="edit"
+          className={`icon ${className}`}
+          onClick={this.onEdit}
+        />
+      </div>
     );
   }
 }

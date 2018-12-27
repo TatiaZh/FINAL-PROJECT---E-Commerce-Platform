@@ -35,7 +35,9 @@ const withFetching = query => Comp => {
     handleEdit = (itemId, value, property) => {
       let data;
       if (this.state.data.length > 0) {
-        const match = this.state.data.find(item => item[property] === value);
+        const match = this.state.data.find(
+          item => item[property] === value && item.id !== itemId
+        );
         if (match) {
           const error = 'Property with this value already exists';
           this.setState({ error });
@@ -73,7 +75,7 @@ const withFetching = query => Comp => {
 
     componentDidMount() {
       this.setState({ isLoading: true });
-      console.log(`${this.props.url}${query}`);
+
       axios
         .get(`${this.props.url}${query}`)
         .then(result => {

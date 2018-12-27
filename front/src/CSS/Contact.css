@@ -1,41 +1,31 @@
-main {
-    display: flex;
-    margin-top: 50px; 
-    flex: 1;
-    flex-wrap: wrap;
-}
-
-
 .contact {
-    display: flex;
-    margin-top: 50px; 
-    justify-content: center;
+  display: flex;
+  margin-top: 150px;
+  justify-content: center;
 }
 .contact__inner {
-    max-width: 40%;
+  max-width: 40%;
 }
 
-h1 {
-display: flex;
-justify-content: center;
-font-family: rubik;
-font-size: 80px;
-font-style: normal;
-font-weight: 200;
-font-style: normal;
-letter-spacing: 0.8px;
-line-height: 112px;
-color:#1d1d1d;
+.contact__inner__title {
+  display: flex;
+  justify-content: center;
+  font-family: Poppins;
+  font-size: 3.5em;
+  font-style: normal;
+  font-weight: 200;
+  letter-spacing: 0.8px;
+  color: #1d1d1d;
 }
 
 .contact__inner__text {
-    margin-left: 15px;
-    font-family: Rubik;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 18px;
-    letter-spacing: .06em;
-    line-height: 1.8em;
-    text-transform: none;
-    color: rgba(29,29,29,.7);
+  margin-left: 15px;
+  font-family: Poppins;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  line-height: 1.8em;
+  text-transform: none;
+  color: rgba(29, 29, 29, 0.7);
 }

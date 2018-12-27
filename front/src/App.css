@@ -1,24 +1,36 @@
-/* body {
-  margin: 0px;
-  perspective: 1px;
-  height: 100%;
-  transform-style: preserve-3d;
-  overflow-y: scroll;
-  overflow-x: hidden;
-} */
-
-.container {
-  max-width: 1800px;
-  width: 100%;
-  height: 100%;
+:root {
+  --green: #57b846;
+  --red: rgb(250, 66, 81);
+  --mutedRed: rgb(221, 88, 88);
+  --purplyGray: #333;
+  --lightGray: #d9d9d9;
+  --textGray: rgba(29, 29, 29, 0.7);
+  --headerHeight: 100px;
+  --adminMenuWidth: 200px;
+  --adminMenuHeight: 100px;
 }
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Rubik', sans-serif;
 }
-
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+li {
+  list-style-type: none;
+}
+body {
+  font-family: sans-serif;
+  font-family: 'Rubik';
+  color: #231f20;
+}
 h1,
 h2,
 h3,
@@ -29,27 +41,21 @@ h6 {
   padding: 0;
 }
 
-p {
-  margin: 0;
-  padding: 0;
-}
-a {
-  color: #000;
-  text-decoration: none;
-}
-input,
-button {
-  outline: none;
-}
-/* product styles */
+/* ------------------------------------------------------------------------ */
 
-/* main a {
-  cursor: pointer;
-  text-decoration: none;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-} */
+.container {
+  margin-top: 100px;
+  max-width: 1800px;
+  width: 100%;
+  height: 100%;
+}
+
+input,
+button,
+textarea {
+  outline: none;
+  border: none;
+}
 
 .main--container--product {
   /* flex: 1 1 auto;  */
@@ -91,6 +97,7 @@ button {
 
 .main--container {
   margin: 40px auto;
+  margin-top: 150px;
   width: 85%;
   /* height: 500px; */
   display: flex;
@@ -114,17 +121,14 @@ button {
   display: block;
 }
 
-@import './CSS/AdminPanel.css';
-
-.edit-product {
-  width: 50px;
-  height: 50px;
-  background: red;
-}
-
-.form-error {
+.error {
   height: 30px;
-  color: rgb(221, 88, 88);
-  padding: 30px 0 15px 0;
+  color: var(--mutedRed);
   font-style: italic;
 }
+
+.icon {
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------- */

@@ -226,5 +226,17 @@
     "nutritionFacts": "",
     "reviews": [],
     "enabled": true
+  },
+  {
+    "id": 11,
+    "title": "Some Product",
+    "desc": "Desc",
+    "price": "25.65",
+    "images": "../images/prod3_1.jpg,../images/prod4_2.jpg",
+    "stock": "16",
+    "timesBought": "0",
+    "nutritionFacts": "Facts",
+    "reviews": [],
+    "enabled": true
   }
 ]

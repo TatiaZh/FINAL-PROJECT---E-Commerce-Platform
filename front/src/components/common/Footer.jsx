@@ -9,13 +9,22 @@ class Footer extends Component {
         <div className="footer--wrapper">
           <div className="footer-top__div">
             <div>
-              <a href="https://facebook.com" className="fa fa-facebook" />
+              <a
+                href="https://facebook.com"
+                className="fa fa-facebook textless-link-icon"
+              />
             </div>
             <div>
-              <a href="http://instagram.com" className="fa fa-instagram" />
+              <a
+                href="http://instagram.com"
+                className="fa fa-instagram textless-link-icon"
+              />
             </div>
             <div>
-              <a href="http://twitter.com" className="fa fa-twitter" />
+              <a
+                href="http://twitter.com"
+                className="fa fa-twitter textless-link-icon"
+              />
             </div>
           </div>
 

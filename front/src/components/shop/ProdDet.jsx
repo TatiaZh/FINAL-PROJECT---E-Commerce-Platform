@@ -26,18 +26,31 @@ class Productdetails extends Component {
             <h1 className="product--details--text--title">{title}</h1>
             <h5 className="product--details--text--price">${price}</h5>
             <p className="product--details--description">{desc}</p>
-            <span>QUANTITY:</span>
+            <span className="product--details--span">QUANTITY:</span>
             <form>
-              <input type="number" min="1" placeholder="1" ref="quantity" />
+              <input
+                type="number"
+                min="1"
+                placeholder="1"
+                ref="quantity"
+                className="product--details--input"
+              />
             </form>
-            <button className="addToCart--button">ADD TO CART</button>
+            {this.props.editable ? (
+              <Link
+                className="edit--button"
+                to={`/admin/products/${this.props.item.id}/edit`}
+              >
+                EDIT
+              </Link>
+            ) : (
+              <button className="addToCart--button">ADD TO CART</button>
+            )}
+
             <div className="product--details--text--icons">
-              {
-                /* <FontAwesomeIcon icon="facebook" />
-              <FontAwesomeIcon icon="twitter" />
-              <FontAwesomeIcon icon="pinterest" /> */
-                // TO BE FIXED
-              }
+              {/* <FontAwesomeIcon icon={['fab', 'facebook']} />
+              <FontAwesomeIcon icon={['fab', 'twitter']} />
+              <FontAwesomeIcon icon={['fab', 'instagram']} /> */}
             </div>
           </div>
 
@@ -65,14 +78,6 @@ class Productdetails extends Component {
               <li>stock: {stock} </li>
             </ul>
           </div>
-          {this.props.editable ? (
-            <Link
-              className="edit-product"
-              to={`/admin/products/${this.props.item.id}/edit`}
-            >
-              <FontAwesomeIcon icon="edit" />
-            </Link>
-          ) : null}
         </section>
       </>
     );

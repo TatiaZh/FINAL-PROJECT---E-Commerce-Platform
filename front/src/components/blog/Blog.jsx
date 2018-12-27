@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Article from './Article';
-import Header from '../common/Header';
+
 import '../../CSS/Blog.css';
 
 class Blog extends Component {
@@ -128,8 +128,7 @@ class Blog extends Component {
 
     return (
       <>
-        <Header />
-        <main>
+        <main className="blog-main">
           <section className="blog">{article}</section>
         </main>
       </>

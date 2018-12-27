@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../../CSS/Show.css';
 import Paging from './Paging';
-import Header from '../common/Header';
 const images = require.context('../../assets/img', true);
 
 class ShowArticle extends Component {
@@ -157,7 +156,6 @@ class ShowArticle extends Component {
     let img = images('./' + this.state.article['detailed']['image']);
     return (
       <>
-        <Header />
         <div className="article">
           <div className="article__inner">
             <div className="article__meta">{this.state.article['meta']}</div>

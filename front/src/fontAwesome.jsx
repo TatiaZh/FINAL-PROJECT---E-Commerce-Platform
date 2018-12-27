@@ -7,7 +7,13 @@ import {
   faCheck,
   faUser,
   faSignOutAlt,
-  faSignInAlt
+  faSignInAlt,
+  faThLarge,
+  faUsers,
+  faBoxes,
+  faPlusSquare,
+  faEnvelope,
+  faUserCog
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebook,
@@ -26,5 +32,11 @@ library.add(
   faSignInAlt,
   faFacebook,
   faTwitter,
-  faPinterest
+  faPinterest,
+  faThLarge,
+  faUsers,
+  faBoxes,
+  faPlusSquare,
+  faEnvelope,
+  faUserCog
 );

@@ -1,30 +1,40 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import '../../CSS/adminPanel/products.css';
 
 export default class Product extends Component {
   render() {
     const { id, title, images, price } = this.props.item;
-    const { onProductClick, editable } = this.props;
+    const { onProductClick, editable, URLtoEdit } = this.props;
     const imagesArr = images.split(',');
     if (!imagesArr) {
       return <p>Loading...</p>;
     }
-    console.log(`../${imagesArr[0]}`);
+    const editableClass = editable ? 'product-editable' : ' ';
     return (
       <>
         <div
           onClick={() => {
             onProductClick(id);
           }}
-          className="main--container--product"
+          className={`main--container--product ${editableClass}`}
           id="main--container--product"
         >
           <img
-            className="main--container--product--image "
+            className={`main--container--product--image `}
             id="first--img"
             src={`../${imagesArr[0]}`}
             alt="sdv"
           />
+          {editable && (
+            <div className="edit-product">
+              <Link to={`${URLtoEdit}/${id}/edit`}>
+                <FontAwesomeIcon icon="edit" className="edit-product__icon" />
+              </Link>
+            </div>
+          )}
           <img
             className="main--container--product--image display--none"
             id="hover--img"
@@ -38,11 +48,6 @@ export default class Product extends Component {
               ${parseInt(price)}
             </p>
           </div>
-          {editable && (
-            <div className="edit-product">
-              <FontAwesomeIcon icon="edit" />
-            </div>
-          )}
         </div>
       </>
     );

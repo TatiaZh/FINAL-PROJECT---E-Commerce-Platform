@@ -2,13 +2,11 @@ import React from 'react';
 import withFetching from '../../common/HOCs/withFetching';
 import Message from './Message';
 
-const Messages = ({ data, isLoading, error, warnings, handleDelete }) => {
+import '../../../CSS/adminPanel/messages.css';
+
+const Messages = ({ data, isLoading, error, handleDelete }) => {
   if (!data) {
     return <p>Loading ...</p>;
-  }
-
-  if (error) {
-    return <p>{error.message}</p>;
   }
 
   if (isLoading) {
@@ -17,17 +15,19 @@ const Messages = ({ data, isLoading, error, warnings, handleDelete }) => {
 
   return (
     <>
-      {warnings
-        ? warnings.map(warning => <p key={warning.id}>{warning.message}</p>)
-        : null}
+      <div className="admin-home__main-section">
+        <div className="messages-wrapper">
+          {error ? <p className="error">{error}</p> : null}
 
-      {data.map(item => (
-        <Message
-          key={item.id}
-          item={item}
-          onDelete={() => handleDelete(item.id)}
-        />
-      ))}
+          {data.map(item => (
+            <Message
+              key={item.id}
+              item={item}
+              onDelete={() => handleDelete(item.id)}
+            />
+          ))}
+        </div>
+      </div>
     </>
   );
 };

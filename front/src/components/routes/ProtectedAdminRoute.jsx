@@ -9,6 +9,7 @@ const ProtectedAdminRoute = ({
   const user = JSON.parse(localStorage.getItem('user'));
   return (
     <Route
+      // exact
       {...restProps}
       render={props =>
         user && user.isAdmin ? (

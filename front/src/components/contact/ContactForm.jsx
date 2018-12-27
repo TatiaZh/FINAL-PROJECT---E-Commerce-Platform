@@ -14,7 +14,6 @@ class ContactForm extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const data = this.state;
   };
   onChange = event => {
     event.preventDefault();
@@ -27,13 +26,19 @@ class ContactForm extends React.Component {
 
   render() {
     return (
-      <form action="" method="POST" onSubmit={this.handleSubmit}>
+      <form
+        action=""
+        method="POST"
+        onSubmit={this.handleSubmit}
+        className="contact-form"
+      >
         <div className="form__row">
           <label>Name *</label>
         </div>
         <div className="form__row--name">
           <div className="form__row--left">
             <input
+              className="contact-input"
               name="name"
               type="text"
               onChange={event => this.onChange(event)}
@@ -42,6 +47,7 @@ class ContactForm extends React.Component {
           </div>
           <div className="form__row--right">
             <input
+              className="contact-input"
               name="surname"
               type="text"
               onChange={event => this.onChange(event)}
@@ -54,6 +60,7 @@ class ContactForm extends React.Component {
         </div>
         <div className="form__row">
           <input
+            className="contact-input"
             name="email"
             type="text"
             onChange={event => this.onChange(event)}
@@ -64,6 +71,7 @@ class ContactForm extends React.Component {
         </div>
         <div className="form__row">
           <input
+            className="contact-input"
             name="title"
             type="text"
             onChange={event => this.onChange(event)}
@@ -74,6 +82,7 @@ class ContactForm extends React.Component {
         </div>
         <div className="form__row">
           <input
+            className="contact-input"
             name="text"
             type="text"
             onChange={event => this.onChange(event)}
@@ -81,7 +90,7 @@ class ContactForm extends React.Component {
         </div>
         <div className="form__row">
           <input
-            className="contact__submit__button"
+            className="contact-input contact__submit__button"
             type="submit"
             value="Submit"
           />
