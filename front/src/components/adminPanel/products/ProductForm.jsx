@@ -19,7 +19,7 @@ const ProductForm = ({
   console.log(error);
   return (
     <>
-      <div className="admin-home__main-section admin-home__main-section--no-margin-top">
+      <div className="admin-home__main-section ">
         <div className=" form-wrapper--inside form-wrapper">
           {method === 'add' ? (
             <h1 className="form-title">Add New Product</h1>

@@ -6,7 +6,7 @@ class Footer extends Component {
   render() {
     return (
       <footer>
-        <div className="footer--wrapper">
+        <div className={`footer--wrapper ${this.props.className}`}>
           <div className="footer-top__div">
             <div>
               <a

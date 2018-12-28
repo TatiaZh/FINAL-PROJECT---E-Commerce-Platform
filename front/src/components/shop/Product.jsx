@@ -16,9 +16,9 @@ export default class Product extends Component {
     return (
       <>
         <div
-          onClick={() => {
-            onProductClick(id);
-          }}
+          // onClick={() => {
+          //   onProductClick(id);
+          // }}
           className={`main--container--product ${editableClass}`}
           id="main--container--product"
         >
@@ -44,9 +44,7 @@ export default class Product extends Component {
 
           <div className="main--container--product--information">
             <h3 className="main--container--product--name">{title}</h3>
-            <p className="main--container--product--price">
-              ${parseInt(price)}
-            </p>
+            <p className="main--container--product--price">${price}</p>
           </div>
         </div>
       </>

@@ -76,7 +76,7 @@
     "title": "sauerkraut",
     "desc": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",
     "price": "10.00",
-    "images": "../images/prod3_1.jpg,../images/prod4_2.jpg",
+    "images": "../images/prod4_1.jpg,../images/prod4_2.jpg",
     "stock": "20",
     "timesBought": "5",
     "nutritionFacts": "Total Fat: 0.6g 1%, Cholesterol: 0mg 0%, Sodium: 400mg 17%, Potassium: 0mg 0%, Total Carbohydrate: 0g 0%, Protein: 23.5g 47%, Vitamin A: 0%, Vitamin C: 0%, Calcium: 0%, Iron: 0%",
@@ -213,30 +213,6 @@
       }
     ],
     "avrStars": "4.5",
-    "enabled": true
-  },
-  {
-    "id": 10,
-    "title": "TiTle",
-    "desc": "sf",
-    "price": "20",
-    "images": "url",
-    "stock": "15",
-    "timesBought": "0",
-    "nutritionFacts": "",
-    "reviews": [],
-    "enabled": true
-  },
-  {
-    "id": 11,
-    "title": "Some Product",
-    "desc": "Desc",
-    "price": "25.65",
-    "images": "../images/prod3_1.jpg,../images/prod4_2.jpg",
-    "stock": "16",
-    "timesBought": "0",
-    "nutritionFacts": "Facts",
-    "reviews": [],
     "enabled": true
   }
 ]

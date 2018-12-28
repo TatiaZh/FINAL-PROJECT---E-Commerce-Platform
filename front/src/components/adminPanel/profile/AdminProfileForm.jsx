@@ -1,6 +1,7 @@
 import React from 'react';
 import TextInput from '../../common/inputs/TextInput';
 import PasswordInput from '../../common/inputs/PasswordInput';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import '../../../CSS/common/form.css';
@@ -25,7 +26,7 @@ const AdminProfileForm = ({
 
   return (
     <>
-      <div className="admin-home__main-section admin-home__main-section--no-margin-top">
+      <div className="admin-home__main-section ">
         <div className="form-wrapper--inside form-wrapper">
           <h1 className="form-title">Edit Settings</h1>
           {error ? <p className="error">{error}</p> : null}

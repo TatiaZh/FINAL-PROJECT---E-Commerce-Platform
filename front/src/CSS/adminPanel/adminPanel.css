@@ -57,11 +57,13 @@
 }
 
 .link--admin {
-  color: var(--mutedRed);
+  /* color: var(--mutedRed); */
+  color: #50a840;
   transition: all ease-in-out 0.3s;
 }
 .link--admin:hover {
   color: var(--red);
+  /* color: var(--green); */
   text-decoration: underline;
 }
 
@@ -69,7 +71,7 @@
   margin-top: 0;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 570px) {
   .admin-home__main-section {
     margin-left: auto;
     margin-top: calc(var(--adminMenuHeight) + var(--headerHeight));

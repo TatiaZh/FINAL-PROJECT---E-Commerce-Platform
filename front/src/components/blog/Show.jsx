@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../../CSS/Show.css';
 import Paging from './Paging';
+import Footer from '../common/Footer';
+
 const images = require.context('../../assets/img', true);
 
 class ShowArticle extends Component {
@@ -23,7 +25,7 @@ class ShowArticle extends Component {
         thumb: 'bottles.jpg',
         meta: 'MICHELLE LIV ∙ OCTOMBER 15, 2015',
         detailed: {
-          image: 'bottles.jpg',
+          image: 'bottles-big.jpg',
           text:
             'In laoreet imperdiet metus, pharetra consectetur velit porta quis. Nam non libero sem. Morbi justo nulla, sagittis a mauris eget, bibendum mollis nunc. Praesent rutrum nunc tincidunt pellentesque volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent tempus, turpis non dictum ullamcorper, quam nisl facilisis lectus, nec bibendum massa velit bibendum tortor. Pellentesque pharetra aliquam neque, id auctor lorem cursus at. Aliquam pharetra blandit pretium. Donec quis arcu in purus sagittis maximus eget in dui. Fusce maximus finibus odio ac scelerisque. Nam sagittis metus at lacus iaculis, ut dictum enim blandit. Sed eu mi non odio finibus dignissim ac non massa. Sed eu odio malesuada, ultrices tortor volutpat, facilisis erat. Fusce tincidunt eleifend ligula sit amet gravida. Maecenas vel bibendum turpis.'
         }
@@ -58,7 +60,7 @@ class ShowArticle extends Component {
         thumb: 'sprout.jpg',
         meta: 'MICHELLE LIV ∙ SEPTEMBER 14, 2015',
         detailed: {
-          image: 'sprout.jpg',
+          image: 'sprout-big.jpg',
           text:
             'Nulla volutpat, erat ac blandit imperdiet, est lacus egestas ex, sit amet lacinia risus ante a lorem. Ut elementum, velit non luctus aliquam, nibh odio molestie lectus, id faucibus felis augue id mauris. Sed porta posuere fringilla. Donec feugiat risus sit amet tortor venenatis, non venenatis nisl bibendum. Etiam at mauris augue. Donec tempus ex a feugiat eleifend. Nulla facilisi. Quisque non tincidunt est. Sed sed gravida sem. Pellentesque sed ipsum dolor. Vestibulum tempus semper libero vitae fermentum. Proin ultrices accumsan enim sed aliquam. In at ipsum turpis. Sed sit amet ligula vel est dapibus accumsan ut vel libero. Proin placerat nunc non ex aliquet dapibus. Aliquam ut ex justo. Curabitur hendrerit justo eu purus pharetra, eu posuere dolor rhoncus. Curabitur eu vulputate velit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur aliquet ullamcorper porttitor. Aenean venenatis mattis sodales. Sed viverra nunc ac purus vulputate tincidunt. Suspendisse potenti. Morbi laoreet sem vitae dictum egestas. Ut a consectetur ligula, at mattis tortor. Maecenas cursus porta felis, quis egestas tellus elementum nec. Proin vitae orci quis mauris dictum lacinia id ut nibh. Proin dictum malesuada nunc, nec tempor est pulvinar ut. Morbi fringilla sodales pulvinar. Etiam eu orci a neque eleifend egestas sit amet eget eros.'
         }
@@ -169,6 +171,7 @@ class ShowArticle extends Component {
           </div>
         </div>
         <Paging next={this.nextPageHandler} prev={this.prevPageHandler} />
+        <Footer />
       </>
     );
   }
