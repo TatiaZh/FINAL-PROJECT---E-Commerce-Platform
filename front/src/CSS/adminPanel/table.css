@@ -3,6 +3,7 @@
   margin: 20px auto;
   overflow-x: auto;
   box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0px 40px 0px rgba(87, 184, 70, 0.15);
 }
 
 .table {
@@ -13,7 +14,8 @@
 
 .table__head {
   box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.1);
-  color: var(--red);
+  /* color: var(--red); */
+  color: var(--green);
   font-size: 1.2em;
 }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Article from './Article';
+import Footer from '../common/Footer';
 
 import '../../CSS/Blog.css';
 
@@ -111,18 +112,16 @@ class Blog extends Component {
       ...this.state.articles
     };
 
-    const article = Object.keys(articles).map(cur => {
+    const article = Object.keys(articles).map((cur, index) => {
       return (
-        <>
-          <Article
-            key={articles[cur].id}
-            imageName={articles[cur].thumb}
-            title={articles[cur].title}
-            meta={articles[cur].meta}
-            clicked={() => this.detailedHandler(articles[cur].id)}
-            detailed={articles[cur].detailed}
-          />
-        </>
+        <Article
+          key={index}
+          imageName={articles[cur].thumb}
+          title={articles[cur].title}
+          meta={articles[cur].meta}
+          clicked={() => this.detailedHandler(articles[cur].id)}
+          detailed={articles[cur].detailed}
+        />
       );
     });
 
@@ -131,6 +130,7 @@ class Blog extends Component {
         <main className="blog-main">
           <section className="blog">{article}</section>
         </main>
+        <Footer />
       </>
     );
   }

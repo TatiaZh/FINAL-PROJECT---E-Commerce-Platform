@@ -11,6 +11,7 @@ import EditAdminProfileForm from '../profile/EditAdminProfileForm';
 import ProductList from '../../shop/ProductList';
 import Dashboard from './Dashboard';
 import IconMenu from './IconMenu';
+import Footer from '../../common/Footer';
 
 import '../../../CSS/adminPanel/adminPanel.css';
 
@@ -41,7 +42,7 @@ class AdminHome extends Component {
     return (
       <>
         <main className="admin-home">
-          {this.state.width > 550 ? (
+          {this.state.width > 570 ? (
             <SideMenu path={path} />
           ) : (
             <IconMenu path={path} />
@@ -91,6 +92,7 @@ class AdminHome extends Component {
           exact
           render={props => <EditAdminProfileForm {...props} url={API} />}
         />
+        <Footer className="footer--wrapper--admin" />
       </>
     );
   }

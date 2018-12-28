@@ -14,6 +14,12 @@ class ContactForm extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
+
+    fetch('http://localhost:5000/api/admin/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(this.state.formControls)
+    });
   };
   onChange = event => {
     event.preventDefault();
@@ -26,19 +32,13 @@ class ContactForm extends React.Component {
 
   render() {
     return (
-      <form
-        action=""
-        method="POST"
-        onSubmit={this.handleSubmit}
-        className="contact-form"
-      >
+      <form action="" method="POST" onSubmit={this.handleSubmit}>
         <div className="form__row">
           <label>Name *</label>
         </div>
         <div className="form__row--name">
           <div className="form__row--left">
             <input
-              className="contact-input"
               name="name"
               type="text"
               onChange={event => this.onChange(event)}
@@ -47,7 +47,6 @@ class ContactForm extends React.Component {
           </div>
           <div className="form__row--right">
             <input
-              className="contact-input"
               name="surname"
               type="text"
               onChange={event => this.onChange(event)}
@@ -60,7 +59,6 @@ class ContactForm extends React.Component {
         </div>
         <div className="form__row">
           <input
-            className="contact-input"
             name="email"
             type="text"
             onChange={event => this.onChange(event)}
@@ -71,7 +69,6 @@ class ContactForm extends React.Component {
         </div>
         <div className="form__row">
           <input
-            className="contact-input"
             name="title"
             type="text"
             onChange={event => this.onChange(event)}
@@ -82,18 +79,13 @@ class ContactForm extends React.Component {
         </div>
         <div className="form__row">
           <input
-            className="contact-input"
             name="text"
             type="text"
             onChange={event => this.onChange(event)}
           />
         </div>
         <div className="form__row">
-          <input
-            className="contact-input contact__submit__button"
-            type="submit"
-            value="Submit"
-          />
+          <input className="black-white-button" type="submit" value="Submit" />
         </div>
       </form>
     );

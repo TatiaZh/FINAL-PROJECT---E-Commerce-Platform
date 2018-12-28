@@ -95,6 +95,7 @@
   margin-top: 0;
   padding-bottom: 70px;
   box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0px 40px 0px rgba(87, 184, 70, 0.15);
 }
 
 .switch-wrapper {
@@ -176,11 +177,16 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 670px) {
   .form-button {
     width: 200px;
   }
   .form-title {
     font-size: 2em;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .form-title {
+    font-size: 1.5em;
   }
 }

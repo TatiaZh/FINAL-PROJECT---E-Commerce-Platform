@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+import { Link, Route } from 'react-router-dom';
 import Product from './Product';
 import ProdDet from './ProdDet';
+import Footer from '../common/Footer';
 
 export default class ProductList extends Component {
   constructor(props) {
     super(props);
     this.state = {
       items: [],
-      itemClicked: false
+      itemClicked: false,
+      itemId: null
     };
   }
   componentDidMount() {
@@ -28,14 +31,15 @@ export default class ProductList extends Component {
       items: sortedProduct
     });
   };
-  onProductClick = id => {
-    const { items } = this.state;
-    const oneItem = items.filter(item => item.id === id);
-    this.setState({
-      items: oneItem,
-      itemClicked: true
-    });
-  };
+  // onProductClick = id => {
+  //   // const { items } = this.state;
+  //   // const oneItem = items.filter(item => item.id === id);
+  //   // this.setState({
+  //   //   items: oneItem,
+  //   //   itemClicked: true
+  //   // });
+  //   this.setState({ itemId: id });
+  // };
 
   render() {
     let { items, itemClicked } = this.state;
@@ -47,7 +51,7 @@ export default class ProductList extends Component {
             {items.map(item => {
               return (
                 <div>
-                  {itemClicked ? (
+                  {/* {itemClicked ? (
                     <ProdDet
                       key={item.id}
                       item={item}
@@ -61,12 +65,24 @@ export default class ProductList extends Component {
                       editable={this.props.editable}
                       URLtoEdit={this.props.URLtoEdit}
                     />
-                  )}
+                  )} */}
+
+                  <Link to={`/products/${item.id}`}>
+                    <Product
+                      key={item.id}
+                      item={item}
+                      editable={this.props.editable}
+                      URLtoEdit={this.props.URLtoEdit}
+                      // onProductClick={this.onProductClick}
+                    />
+                  </Link>
                 </div>
               );
             })}
           </div>
         </main>
+
+        <Footer />
       </>
     );
   }

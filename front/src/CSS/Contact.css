@@ -29,3 +29,14 @@
   text-transform: none;
   color: rgba(29, 29, 29, 0.7);
 }
+@media only screen and (max-width: 800px) {
+  .contact__inner {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .contact__inner {
+    max-width: 90%;
+  }
+}

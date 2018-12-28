@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect, Link } from 'react-router-dom';
 import TextInput from './inputs/TextInput';
 import PasswordInput from './inputs/PasswordInput';
+import Footer from '../common/Footer';
 
 import '../../CSS/login.css';
 
@@ -73,6 +74,7 @@ const LoginForm = ({
         {localStorage.user && (
           <Redirect to={`/users/${JSON.parse(localStorage.user).id}/profile`} />
         )}
+        <Footer />
       </div>
     </>
   );
