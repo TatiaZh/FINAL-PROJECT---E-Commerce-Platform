@@ -13,6 +13,10 @@
      
    2. Move to the directory called 'front' and enter 'npm install' and 'npm start' commands
    
+ ##### To see the Admin Pannel enter "admin" and "admin123" as username and password.
+  
+ ##### To see the User Profile enter "user" and "123456" as username and password
+   
 ### You are ready to go!
 
 
