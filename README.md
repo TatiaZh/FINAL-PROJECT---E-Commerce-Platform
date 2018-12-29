@@ -1,6 +1,24 @@
 # FINAL-PROJECT---E-Commerce-Platform
 
 
+### After cloning/forking the repositoy, to run this project you 
+  #### Must have installed:
+   1. [Node JS](https://nodejs.org/en/)
+   2. [Nodemon](https://nodemon.io/)
+   3. [React](https://reactjs.org/docs/getting-started.html)
+  #### Must follow these steps: 
+   In terminal
+   
+   1. Move to the directory called 'back' and enter 'npm install' and 'npm run start' commands
+     
+   2. Move to the directory called 'front' and enter 'npm install' and 'npm start' commands
+   
+### You are ready to go!
+
+
+
+# Description:
+
 Basic E-Commerce Platform
 
 ## Responsive Web Design
