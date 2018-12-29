@@ -25,12 +25,15 @@ router.route('/:id/cart').post((req, res) => {
     return res.status(404).json({ message: 'user not found' });
   }
 
-  const { productId, quantity } = validateCartProduct(req.body);
-  console.log(productId, quantity);
-  User.addToCart(user, { productId, quantity });
+  const product = validateCartProduct(req.body);
+  if (product.error) {
+    return res.status(400).json({ message: product.error });
+  }
+
+  User.addToCart(user, product);
   fs.writeFileSync('db/users.json', JSON.stringify(usersDB, null, 2));
 
-  return res.json(productId);
+  return res.json(product.productId);
 });
 
 // path will be /api/users/{id}/cart/{id}/all
@@ -66,7 +69,7 @@ router.route('/:id/cart/:prodId').delete((req, res) => {
   }
 
   User.removeFromCart(user, product);
-
+  console.log(product);
   fs.writeFileSync('db/users.json', JSON.stringify(usersDB, null, 2));
   return res.json(product);
 });

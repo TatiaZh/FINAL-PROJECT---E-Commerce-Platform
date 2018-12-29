@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import CartItem from './CartItem';
-import '../../CSS/cart.css';
+import '../../CSS/user/cart.css';
 
 class Cart extends Component {
   constructor(props) {

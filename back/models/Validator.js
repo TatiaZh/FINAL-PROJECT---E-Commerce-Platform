@@ -58,6 +58,7 @@ function validateProduct(product) {
 
 function validateCartProduct(product) {
   const { productId, quantity } = product;
+
   if (!isString(productId)) {
     return {
       error: 'product must have id property and it must be in string format'

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import '../../CSS/header.css';
+import '../../CSS/common/header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Header extends Component {

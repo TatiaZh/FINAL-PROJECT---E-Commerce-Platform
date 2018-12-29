@@ -1,7 +1,6 @@
 import React from 'react';
-import '../../CSS/ContactForm.css';
+import '../../CSS/contact/ContactForm.css';
 import SweetAlert from 'sweetalert2-react';
-import Footer from '../common/Footer';
 
 class ContactForm extends React.Component {
   state = {
@@ -19,11 +18,20 @@ class ContactForm extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-
+    const date = new Date();
+    const dateString = new Date(
+      date.getTime() - date.getTimezoneOffset() * 60000
+    )
+      .toISOString()
+      .split('T')[0];
+    const body = {
+      ...this.state.formControls,
+      dateSent: dateString
+    };
     fetch('http://localhost:5000/api/admin/messages', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(this.state.formControls)
+      body: JSON.stringify(body)
     });
   };
   onChange = event => {
@@ -39,6 +47,7 @@ class ContactForm extends React.Component {
         this.state.message = this.state.notSend;
       }
     }
+
     this.setState({ formControls });
   };
   validateEmail(email) {
@@ -105,20 +114,22 @@ class ContactForm extends React.Component {
             <label className="label">Message *</label>
           </div>
           <div className="form__row">
-            <input
+            <textarea
+              rows={8}
               name="text"
               type="text"
               onChange={event => this.onChange(event)}
-              className="contact-input"
+              className="contact-input contact-input--text-area"
             />
           </div>
           <div className="form__row">
-            <input
+            <button
               className="black-white-button"
               type="submit"
-              value="Submit"
               onClick={() => this.setState({ show: true })}
-            />
+            >
+              Submit
+            </button>
             <SweetAlert
               show={this.state.show}
               title="Notification"

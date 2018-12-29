@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Article from './Article';
-import Footer from '../common/Footer';
 
-import '../../CSS/Blog.css';
+import '../../CSS/blog/Blog.css';
 
 class Blog extends Component {
   state = {

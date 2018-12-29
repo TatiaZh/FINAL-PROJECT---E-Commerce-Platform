@@ -4,7 +4,7 @@ import TextInput from './inputs/TextInput';
 import PasswordInput from './inputs/PasswordInput';
 import Footer from '../common/Footer';
 
-import '../../CSS/login.css';
+import '../../CSS/common/login.css';
 
 const LoginForm = ({
   formIsValid,

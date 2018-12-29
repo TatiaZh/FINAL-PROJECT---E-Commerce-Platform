@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import '../../CSS/mainBody.css';
+import '../../CSS/homePage/mainBody.css';
 
 class MainBody extends Component {
   render() {

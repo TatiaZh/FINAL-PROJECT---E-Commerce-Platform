@@ -33,10 +33,11 @@ router.route('/').post((req, res) => {
 // in case we want to return multiple but specific products.
 // for example - handy with cart, this way we avoid sending too many requests
 // path will be /api/products/multiple
-router.route('/multiple').get((req, res) => {
+router.route('/multiple').post((req, res) => {
   const productsDB = JSON.parse(fs.readFileSync('db/products.json'));
 
   const idArray = req.body.idArray;
+
   const filteredDB = [];
   for (let id of idArray) {
     const product = productsDB.find(product => product.id == id);

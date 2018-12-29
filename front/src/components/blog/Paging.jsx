@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../../CSS/Paging.css';
+import '../../CSS/blog/Paging.css';
 
 const paging = props => (
   <div className="pager">

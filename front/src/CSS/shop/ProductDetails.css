@@ -122,7 +122,6 @@
   background-color: #f6f6f6;
 }
 
-.black-white-button,
 .addToCart--button {
   background-color: white;
   margin-top: 30px;
@@ -132,7 +131,7 @@
   border: 1.5px solid black;
   cursor: pointer;
 }
-.black-white-button:hover,
+
 .addToCart--button:hover {
   color: white;
   background-color: black;

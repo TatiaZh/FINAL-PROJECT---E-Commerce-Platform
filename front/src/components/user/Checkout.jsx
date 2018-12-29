@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../CSS/checkout.css';
+import '../../CSS/user/checkout.css';
 
 // import './checkout.css';
 class Checkout extends Component {

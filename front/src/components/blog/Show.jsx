@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import '../../CSS/Show.css';
+import '../../CSS/blog/Show.css';
 import Paging from './Paging';
-import Footer from '../common/Footer';
 
 const images = require.context('../../assets/img', true);
 

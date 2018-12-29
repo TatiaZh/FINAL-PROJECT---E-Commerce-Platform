@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Product from './Product';
-import Footer from '../common/Footer';
+import '../../CSS/shop/products.css';
 
 export default class ProductList extends Component {
   constructor(props) {

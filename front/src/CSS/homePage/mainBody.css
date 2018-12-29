@@ -20,7 +20,7 @@
   position: relative;
 }
 .batch__section--wrapper-1 {
-  background-image: url('../assets/img/pickles-editorial-green-v6.jpg');
+  background-image: url('../../assets/img/pickles-editorial-green-v6.jpg');
 }
 .batch__section,
 .main-content,
@@ -141,7 +141,7 @@
 /* #region Batch-2-Section */
 
 .batch__section--wrapper-2 {
-  background-image: url('../assets/img/pickles-editorial-pink-v2.jpg');
+  background-image: url('../../assets/img/pickles-editorial-pink-v2.jpg');
 }
 .batch__section-2 {
   align-items: flex-end;
@@ -181,7 +181,7 @@
 /* #region Batch-3-Section */
 
 .batch__section--wrapper-3 {
-  background-image: url('../assets/img/pickles-editorial-blue-v2.jpg');
+  background-image: url('../../assets/img/pickles-editorial-blue-v2.jpg');
 }
 
 /* #endregion Batch-3-Section */

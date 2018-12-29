@@ -50,7 +50,13 @@ class User {
     user.broughtProducts = broughtProducts || user.broughtProducts;
   }
   static addToCart(user, product) {
-    user.cart.push({ id: product.productId, quantity: product.quantity });
+    const updatedItem = user.cart.find(item => product.productId === item.id);
+    console.log(user.cart, product);
+    if (updatedItem) {
+      updatedItem.quantity = product.quantity;
+    } else {
+      user.cart.push({ id: product.productId, quantity: product.quantity });
+    }
   }
   static removeFromCart(user, product) {
     user.cart.splice(user.cart.indexOf(product), 1);

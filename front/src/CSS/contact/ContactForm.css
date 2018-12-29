@@ -9,9 +9,10 @@
   color: rgba(53, 52, 52, 0.7);
   margin: 20px;
 }
-label {
+.label {
   display: flex;
   flex-basis: 100%;
+  color: var(--textGray);
 }
 
 .form__row--nameTitle {
@@ -19,12 +20,13 @@ label {
   flex-wrap: wrap;
 }
 .form__row {
-  padding: 15px 0px 0px 15px;
+  /* padding: 15px 0px 0px 15px; */
+  margin: 15px 0;
 }
 .form__row--name {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .form__row--left,
@@ -34,37 +36,24 @@ label {
   flex-wrap: wrap;
 }
 
-.black-white-button {
-  width: 150px;
-  height: 50px;
-  padding: 35 14 35 14;
-  border: 1px solid black;
-  font-family: rubik;
-  font-weight: 300;
-  font-style: normal;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  display: inline-block;
-  text-align: center;
-}
-input {
+.contact-input {
   border: 1px solid #ccc;
   background: #fafafa;
   display: flex;
   flex-wrap: wrap;
   height: 40px;
   width: 100%;
+  padding: 0 10px;
+}
+.contact-input--text-area {
+  height: auto;
+  padding: 10px 10px;
 }
 
 .label__little {
   font-size: 11px;
 }
 
-
-.contact__submit__button:hover {
-  background-color: black;
-  color: aliceblue;
-}
 @media only screen and (max-width: 1200px) {
   .form__row--name {
     flex-wrap: wrap;
