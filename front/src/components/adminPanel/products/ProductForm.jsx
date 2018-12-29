@@ -16,7 +16,7 @@ const ProductForm = ({
   handleSubmit
 }) => {
   const { title, price, stock, images, desc, nutritionFacts } = formControls;
-  console.log(error);
+
   return (
     <>
       <div className="admin-home__main-section ">

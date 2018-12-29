@@ -171,7 +171,6 @@ class ShowArticle extends Component {
           </div>
         </div>
         <Paging next={this.nextPageHandler} prev={this.prevPageHandler} />
-        <Footer />
       </>
     );
   }

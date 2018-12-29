@@ -92,7 +92,6 @@ class AdminHome extends Component {
           exact
           render={props => <EditAdminProfileForm {...props} url={API} />}
         />
-        <Footer className="footer--wrapper--admin" />
       </>
     );
   }

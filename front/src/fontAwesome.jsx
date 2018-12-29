@@ -13,7 +13,8 @@ import {
   faBoxes,
   faPlusSquare,
   faEnvelope,
-  faUserCog
+  faUserCog,
+  faShoppingCart
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebook,
@@ -38,5 +39,6 @@ library.add(
   faBoxes,
   faPlusSquare,
   faEnvelope,
-  faUserCog
+  faUserCog,
+  faShoppingCart
 );

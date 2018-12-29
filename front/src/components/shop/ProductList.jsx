@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Product from './Product';
-import ProdDet from './ProdDet';
 import Footer from '../common/Footer';
 
 export default class ProductList extends Component {
@@ -9,7 +8,6 @@ export default class ProductList extends Component {
     super(props);
     this.state = {
       items: [],
-      itemClicked: false,
       itemId: null
     };
   }
@@ -24,25 +22,8 @@ export default class ProductList extends Component {
       .catch(err => console.log(err));
   }
 
-  removeTour = id => {
-    const { items } = this.state;
-    const sortedProduct = items.filter(item => item.id !== id);
-    this.setState({
-      items: sortedProduct
-    });
-  };
-  // onProductClick = id => {
-  //   // const { items } = this.state;
-  //   // const oneItem = items.filter(item => item.id === id);
-  //   // this.setState({
-  //   //   items: oneItem,
-  //   //   itemClicked: true
-  //   // });
-  //   this.setState({ itemId: id });
-  // };
-
   render() {
-    let { items, itemClicked } = this.state;
+    let { items } = this.state;
 
     return (
       <>
@@ -50,30 +31,13 @@ export default class ProductList extends Component {
           <div className="main--container">
             {items.map(item => {
               return (
-                <div>
-                  {/* {itemClicked ? (
-                    <ProdDet
-                      key={item.id}
-                      item={item}
-                      editable={this.props.editable}
-                    />
-                  ) : (
-                    <Product
-                      key={item.id}
-                      item={item}
-                      onProductClick={this.onProductClick}
-                      editable={this.props.editable}
-                      URLtoEdit={this.props.URLtoEdit}
-                    />
-                  )} */}
-
+                <div key={item.id}>
                   <Link to={`/products/${item.id}`}>
                     <Product
                       key={item.id}
                       item={item}
                       editable={this.props.editable}
                       URLtoEdit={this.props.URLtoEdit}
-                      // onProductClick={this.onProductClick}
                     />
                   </Link>
                 </div>
@@ -81,8 +45,6 @@ export default class ProductList extends Component {
             })}
           </div>
         </main>
-
-        <Footer />
       </>
     );
   }

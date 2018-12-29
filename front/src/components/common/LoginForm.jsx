@@ -74,7 +74,6 @@ const LoginForm = ({
         {localStorage.user && (
           <Redirect to={`/users/${JSON.parse(localStorage.user).id}/profile`} />
         )}
-        <Footer />
       </div>
     </>
   );

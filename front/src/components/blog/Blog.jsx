@@ -130,7 +130,6 @@ class Blog extends Component {
         <main className="blog-main">
           <section className="blog">{article}</section>
         </main>
-        <Footer />
       </>
     );
   }

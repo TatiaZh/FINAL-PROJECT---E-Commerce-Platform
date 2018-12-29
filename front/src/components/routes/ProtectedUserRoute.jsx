@@ -12,7 +12,7 @@ const ProtectedUserRoute = ({
       {...restProps}
       render={props =>
         user && !user.isAdmin ? (
-          <Component {...restProps} />
+          <Component {...restProps} {...props} />
         ) : (
           <Redirect to={`/login`} />
         )

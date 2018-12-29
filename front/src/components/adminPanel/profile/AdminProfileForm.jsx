@@ -103,7 +103,6 @@ const AdminProfileForm = ({
               ) : (
                 'Save'
               )}
-              {/* {isLoading ? <FontAwesomeIcon icon="spinner" spin /> : 'Save'} */}
             </button>
           </form>
         </div>

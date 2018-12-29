@@ -8,7 +8,10 @@ class Productdetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      item: null
+      item: null,
+      quantity: 1,
+      isLoading: false,
+      done: false
     };
   }
   componentDidMount() {
@@ -21,6 +24,46 @@ class Productdetails extends Component {
       })
       .catch(err => console.log(err));
   }
+  addToCart = () => {
+    if (localStorage.user && !localStorage.user.isAdmin) {
+      this.setState({ isLoading: true });
+      const user = JSON.parse(localStorage.getItem('user'));
+      const id = user.id;
+      let quantity = parseInt(this.state.quantity);
+      const sameProduct = user.cart.find(item => item.id == this.state.item.id);
+      if (sameProduct) {
+        quantity += parseInt(sameProduct.quantity);
+
+        sameProduct.quantity = quantity;
+        localStorage.setItem('user', JSON.stringify(user));
+      }
+      const body = {
+        productId: `${this.state.item.id}`,
+        quantity: `${quantity}`
+      };
+      fetch(`http://localhost:5000/api/users/${id}/cart`, {
+        method: 'post',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      })
+        .then(res => {
+          setTimeout(
+            () => this.setState({ isLoading: false, done: true }),
+            1000
+          );
+          setTimeout(() => this.setState({ done: false }), 2000);
+        })
+        .catch(err => console.log(err));
+    } else {
+      window.location = '/login';
+    }
+  };
+
+  handleQntChange = e => {
+    const value = e.target.value;
+    this.setState({ quantity: value });
+  };
+
   render() {
     if (!this.state.item) {
       return <p>Loading...</p>;
@@ -30,7 +73,6 @@ class Productdetails extends Component {
       desc,
       images,
       price,
-      timesBought,
       nutritionFacts,
       stock
     } = this.state.item;
@@ -48,15 +90,16 @@ class Productdetails extends Component {
               <h5 className="product--details--text--price">${price}</h5>
               <p className="product--details--description">{desc}</p>
               <span className="product--details--span">QUANTITY:</span>
-              <form>
-                <input
-                  type="number"
-                  min="1"
-                  placeholder="1"
-                  ref="quantity"
-                  className="product--details--input"
-                />
-              </form>
+
+              <input
+                type="number"
+                min="1"
+                max={stock}
+                placeholder="1"
+                className="product--details--input"
+                onChange={e => this.handleQntChange(e)}
+              />
+
               {this.props.editable ? (
                 <Link
                   className="edit--button"
@@ -65,14 +108,18 @@ class Productdetails extends Component {
                   EDIT
                 </Link>
               ) : (
-                <button className="addToCart--button">ADD TO CART</button>
+                <button className="addToCart--button" onClick={this.addToCart}>
+                  {this.state.isLoading ? (
+                    <FontAwesomeIcon icon="spinner" spin />
+                  ) : this.state.done ? (
+                    <FontAwesomeIcon icon="check" />
+                  ) : (
+                    'ADD TO CART'
+                  )}
+                </button>
               )}
 
-              <div className="product--details--text--icons">
-                {/* <FontAwesomeIcon icon={['fab', 'facebook']} />
-              <FontAwesomeIcon icon={['fab', 'twitter']} />
-              <FontAwesomeIcon icon={['fab', 'instagram']} /> */}
-              </div>
+              <div className="product--details--text--icons" />
             </div>
           </div>
           <div className="product--details--section">

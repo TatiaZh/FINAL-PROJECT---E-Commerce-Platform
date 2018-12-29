@@ -62,9 +62,9 @@ class Header extends Component {
             <div className="header__inner__cart-login">
               {user && !user.isAdmin ? (
                 <div className="header__inner__cart">
-                  <i className="fa fa-shopping-cart" />
-
-                  <span className="item-count__div">0</span>
+                  <Link to="/user/cart">
+                    <FontAwesomeIcon icon="shopping-cart" />
+                  </Link>
                 </div>
               ) : null}
               <div className="header__inner__login-controls">
@@ -73,7 +73,7 @@ class Header extends Component {
                 ) : user ? (
                   user.isAdmin ? (
                     <>
-                      <Link to={`admin`}>
+                      <Link to={`/admin`}>
                         <FontAwesomeIcon icon="user" className="profile-icon" />
                       </Link>
                       <div className="sign-in-out-block">

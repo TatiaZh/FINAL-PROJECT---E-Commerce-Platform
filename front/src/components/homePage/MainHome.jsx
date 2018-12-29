@@ -9,7 +9,6 @@ const MainHome = props => {
   return (
     <div className="container">
       <Body />
-      <Footer />
     </div>
   );
 };

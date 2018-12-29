@@ -17,7 +17,7 @@ const UserProfile = ({ data, isLoading, errors, match }) => {
         ? errors.map(error => <p key={error.id}>{error.message}</p>)
         : null}
       <Header />
-      <div>
+      {/* <div>
         <div>
           <p>Name</p>
           <p>{name}</p>
@@ -30,7 +30,7 @@ const UserProfile = ({ data, isLoading, errors, match }) => {
           <p>Email</p>
           <p>{email}</p>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

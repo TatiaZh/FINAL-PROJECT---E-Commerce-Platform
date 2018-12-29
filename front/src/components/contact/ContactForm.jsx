@@ -1,8 +1,13 @@
 import React from 'react';
 import '../../CSS/ContactForm.css';
+import SweetAlert from 'sweetalert2-react';
+import Footer from '../common/Footer';
 
 class ContactForm extends React.Component {
   state = {
+    show: false,
+    message: null,
+    notSend: 'Please check your email!',
     formControls: {
       title: '',
       text: '',
@@ -27,67 +32,102 @@ class ContactForm extends React.Component {
     const name = event.target.name;
     const formControls = { ...this.state.formControls };
     formControls[name] = value;
+    if (name == 'email') {
+      if (this.validateEmail(value)) {
+        this.state.message = 'Your message has been sent succesfully!';
+      } else {
+        this.state.message = this.state.notSend;
+      }
+    }
     this.setState({ formControls });
   };
-
+  validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+  formAlert() {
+    this.setState({ show: false });
+  }
   render() {
     return (
-      <form action="" method="POST" onSubmit={this.handleSubmit}>
-        <div className="form__row">
-          <label>Name *</label>
-        </div>
-        <div className="form__row--name">
-          <div className="form__row--left">
+      <>
+        <form action="" method="POST" onSubmit={this.handleSubmit}>
+          <div className="form__row--nameTitle">
+            <label className="label">Name *</label>
+          </div>
+          <div className="form__row--name">
+            <div className="form__row--left">
+              <input
+                name="name"
+                type="text"
+                onChange={event => this.onChange(event)}
+                className="contact-input"
+              />
+              <label className="label" className="label__little">
+                First Name
+              </label>
+            </div>
+            <div className="form__row--right">
+              <input
+                name="surname"
+                type="text"
+                onChange={event => this.onChange(event)}
+                className="contact-input"
+              />
+              <label className="label" className="label__little">
+                Last Name
+              </label>
+            </div>
+          </div>
+          <div className="form__row">
+            <label className="label">Email Address *</label>
+          </div>
+          <div className="form__row">
             <input
-              name="name"
+              name="email"
               type="text"
               onChange={event => this.onChange(event)}
+              className="contact-input"
             />
-            <label className="label__little">First Name</label>
           </div>
-          <div className="form__row--right">
+          <div className="form__row">
+            <label className="label">Subject *</label>
+          </div>
+          <div className="form__row">
             <input
-              name="surname"
+              name="title"
               type="text"
               onChange={event => this.onChange(event)}
+              className="contact-input"
             />
-            <label className="label__little">Last Name</label>
           </div>
-        </div>
-        <div className="form__row">
-          <label>Email Address *</label>
-        </div>
-        <div className="form__row">
-          <input
-            name="email"
-            type="text"
-            onChange={event => this.onChange(event)}
-          />
-        </div>
-        <div className="form__row">
-          <label>Subject *</label>
-        </div>
-        <div className="form__row">
-          <input
-            name="title"
-            type="text"
-            onChange={event => this.onChange(event)}
-          />
-        </div>
-        <div className="form__row">
-          <label>Message *</label>
-        </div>
-        <div className="form__row">
-          <input
-            name="text"
-            type="text"
-            onChange={event => this.onChange(event)}
-          />
-        </div>
-        <div className="form__row">
-          <input className="black-white-button" type="submit" value="Submit" />
-        </div>
-      </form>
+          <div className="form__row">
+            <label className="label">Message *</label>
+          </div>
+          <div className="form__row">
+            <input
+              name="text"
+              type="text"
+              onChange={event => this.onChange(event)}
+              className="contact-input"
+            />
+          </div>
+          <div className="form__row">
+            <input
+              className="black-white-button"
+              type="submit"
+              value="Submit"
+              onClick={() => this.setState({ show: true })}
+            />
+            <SweetAlert
+              show={this.state.show}
+              title="Notification"
+              text={this.state.message}
+              onConfirm={() => this.formAlert()}
+            />
+          </div>
+        </form>
+      </>
     );
   }
 }
