@@ -48,8 +48,10 @@ class MainBody extends Component {
               <img
                 src={'../../images/pickles-blog-beet-on-pink-square.jpeg'}
                 alt=""
+                
               />
               <img
+                className="main-contant__section-2__img"
                 src={'../../images/pickles-blog-cucumber-on-green.jpeg'}
                 alt=""
               />
