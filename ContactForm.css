@@ -1,0 +1,86 @@
+.contact-form {
+  font-family: Rubik;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  line-height: 1.8em;
+  text-transform: none;
+  color: rgba(53, 52, 52, 0.7);
+  margin: 20px;
+}
+label {
+  display: flex;
+  flex-basis: 100%;
+}
+
+.form__row--nameTitle {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form__row {
+  padding: 15px 0px 0px 15px;
+}
+.form__row--name {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.form__row--left,
+.form__row--right {
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.black-white-button {
+  width: 150px;
+  height: 50px;
+  padding: 35 14 35 14;
+  border: 1px solid black;
+  font-family: rubik;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  text-align: center;
+}
+input {
+  border: 1px solid #ccc;
+  background: #fafafa;
+  display: flex;
+  flex-wrap: wrap;
+  height: 40px;
+  width: 100%;
+}
+
+.label__little {
+  font-size: 11px;
+}
+
+
+.contact__submit__button:hover {
+  background-color: black;
+  color: aliceblue;
+}
+@media only screen and (max-width: 1200px) {
+  .form__row--name {
+    flex-wrap: wrap;
+  }
+  .form__row--left,
+  .form__row--right {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .form__row--name {
+    flex-wrap: wrap;
+  }
+  .form__row--left,
+  .form__row--right {
+    width: 90%;
+  }
+}
