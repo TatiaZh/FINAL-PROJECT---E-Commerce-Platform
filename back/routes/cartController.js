@@ -69,7 +69,7 @@ router.route('/:id/cart/:prodId').delete((req, res) => {
   }
 
   User.removeFromCart(user, product);
-  console.log(product);
+  
   fs.writeFileSync('db/users.json', JSON.stringify(usersDB, null, 2));
   return res.json(product);
 });

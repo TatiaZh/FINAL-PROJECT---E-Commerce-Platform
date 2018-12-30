@@ -28,6 +28,7 @@ router.route('/').get((req, res) => {
 
 // path will be /api/users/register
 router.route('/register').post((req, res) => {
+  req.body.password = req.body.newPassword;
   const user = validateUser(req.body);
   user.password = encrypt(user.password);
   let usersDB = JSON.parse(fs.readFileSync('db/users.json'));

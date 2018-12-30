@@ -1,5 +1,6 @@
 import React from 'react';
-import TextInput from '../../common/inputs/TextInput';
+import TextInput from './common/inputs/TextInput';
+import PasswordInput from './common/inputs/PasswordInput';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const UserForm = ({
@@ -7,7 +8,7 @@ const UserForm = ({
   formControls,
   isLoading,
   error,
-  method,
+  done,
   handleChange,
   handleSubmit
 }) => {
@@ -69,7 +70,7 @@ const UserForm = ({
             onChange={handleChange}
             className="form-input"
           />
-          <PasswInput
+          <PasswordInput
             type="text"
             name="repeatNewPassword"
             maxLength={password.validationRules.maxLength}

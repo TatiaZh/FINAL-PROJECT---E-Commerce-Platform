@@ -105,6 +105,7 @@ const withFormFunctional = formControls => Comp => {
       }
 
       if (this.props.method === 'edit') {
+        console.log(this.props.url);
         const url = this.props.url;
         axios
           .put(url, body)

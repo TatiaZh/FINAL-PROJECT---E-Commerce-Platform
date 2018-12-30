@@ -1,5 +1,5 @@
-import React from "react";
-import withFetching from "../common/HOCs/withFetching";
+import React from 'react';
+import withFetching from '../common/HOCs/withFetching';
 import '../../CSS/user/userProfile.css';
 
 const UserProfile = ({ data, isLoading, errors, match }) => {
@@ -31,10 +31,10 @@ const UserProfile = ({ data, isLoading, errors, match }) => {
             <p className="profile-input__header">Email</p>
             <p>{email}</p>
           </div>
-          <div className="profile-input">
+          {/* <div className="profile-input">
             <p className="profile-input__header">Password</p>
             <p>{password}</p>
-          </div>
+          </div> */}
           <div className="profile-input">
             <p className="profile-input__header">Age</p>
             <p>{age}</p>
@@ -53,7 +53,7 @@ const UserProfile = ({ data, isLoading, errors, match }) => {
   );
 };
 
-const DEFAULT_QUERY = "";
+const DEFAULT_QUERY = '';
 const UserProfileWithFetch = withFetching(DEFAULT_QUERY)(UserProfile);
 
 export default UserProfileWithFetch;

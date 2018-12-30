@@ -13,7 +13,8 @@ import ShopMain from './components/shop/ShopMain';
 import ProdDet from './components/shop/ProdDet';
 import Login from './components/common/Login';
 import UserHome from './components/user/UserHome';
-import UserProfile  from './components/user/UserProfile';
+import UserProfile from './components/user/UserProfile';
+import EditUserProfile from './components/user/EditUserProfile';
 import Contact from './components/contact/Contact';
 import Register from './components/AddUserForm';
 import ShowArticle from './components/blog/Show';
@@ -58,9 +59,15 @@ class App extends Component {
             path="/login"
             render={props => <Login {...props} url={`${API}users/login`} />}
           />
-          <Route 
+          <Route
             path="/register"
-            render={props => <Register {...props}/>}
+            render={props => <Register url={`${API}users/`} {...props} />}
+          />
+          <Route
+            path="/user/edit/:id"
+            render={props => (
+              <EditUserProfile url={`${API}users/`} {...props} />
+            )}
           />
           {/* <Route path="/user/cart" render={props => <Cart {...props} />} /> */}
           {/* <Route
@@ -69,7 +76,11 @@ class App extends Component {
           /> */}
 
           <ProtectedUserRoute path="/user" component={UserHome} url={url} />
-          <ProtectedUserRoute path="/user/profile" component={UserProfile} url={url}/>
+          <ProtectedUserRoute
+            path="/user/profile"
+            component={UserProfile}
+            url={url}
+          />
           <ProtectedAdminRoute path="/admin" component={AdminHome} />
         </AppRouting>
       </Router>

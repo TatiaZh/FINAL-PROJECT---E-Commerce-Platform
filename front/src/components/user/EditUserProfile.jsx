@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import withFormFunctional from "../../common/HOCs/withFormFunctional";
-import UserForm from "../UserForm";
-import axios from "axios";
+import React, { Component } from 'react';
+import withFormFunctional from '../common/HOCs/withFormFunctional';
+import UserForm from '../UserForm';
+import axios from 'axios';
 
 class EditUserForm extends Component {
   constructor(props) {
@@ -15,6 +15,7 @@ class EditUserForm extends Component {
 
   componentDidMount() {
     this.setState({ isLoading: true });
+    console.log(this.props);
     const id = this.props.match.params.id;
     axios
       .get(`${this.props.url}/${id}`)
@@ -36,80 +37,84 @@ class EditUserForm extends Component {
       return <p>Loading...</p>;
     }
     const formControls = {
-        name: {
-          value: this.name,
-          placeholder: "Your Name",
-          validationRules: {
-            maxLength: 250,
-            isRequired: true
-          }
+      name: {
+        value: user.name,
+        placeholder: 'Your Name',
+        validationRules: {
+          maxLength: 250,
+          isRequired: true
+        }
+      },
+      username: {
+        value: user.username,
+        placeholder: 'Choose an username',
+        validationRules: {
+          format: /^[a-zA-Z\-]+$/,
+          isRequired: true
+        }
+      },
+      email: {
+        value: user.email,
+        placeholder: 'Your Email',
+        validationRules: {
+          format: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+          isRequired: true
+        }
+      },
+
+      age: {
+        value: user.age,
+        placeholder: 'Age',
+        validationRules: {
+          format: /^[0-9]+$/,
+          isRequired: true
+        }
+      },
+      birthday: {
+        value: user.birthday,
+        placeholder: 'Date of your birth',
+        validationRules: {
+          format: /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/,
+          isRequired: true
+        }
+      },
+      phone: {
+        value: user.phone,
+        placeholder: 'Your mobile phone',
+        validationRules: {
+          format: /^\(?([0-9]{1})?[-. ]?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/,
+          isRequired: true
         },
-        username: {
-          value: this.username,
-          placeholder: "Choose an username",
-          validationRules: {
-            format: /^[a-zA-Z\-]+$/,
-            isRequired: true
-          }
-        },
-        email: {
-          value: this.email,
-          placeholder: "Your Email",
-          validationRules: {
-            format: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-            isRequired: true
-          }
+        oldPassword: {
+          value: '',
+          placeholder: 'Old Password'
         },
         newPassword: {
-          value: this.newPassword,
-          placeholder: "Your Password",
+          value: '',
+          placeholder: 'New Password',
           validationRules: {
             minLength: 8,
-            maxLength: 30,
-            isRequired: true
+            maxLength: 30
           }
         },
         repeatNewPassword: {
-          value: this.repeatNewPassword,
-          placeholder: "Repeat New Password",
+          value: '',
+          placeholder: 'Repeat New Password',
           validationRules: {
             minLength: 8,
             maxLength: 30,
             matchPassword: true
           }
-        },
-        age: {
-          value: this.age,
-          placeholder: "Age",
-          validationRules: {
-            format: /^[0-9]+$/,
-            isRequired: true
-          }
-        },
-        birthday: {
-          value: this.birthday,
-          placeholder: "Date of your birth",
-          validationRules: {
-            format: /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/,
-            isRequired: true
-          }
-        },
-        phone: {
-          value: this.phone,
-          placeholder: "Your mobile phone",
-          validationRules: {
-            format: /^\(?([0-9]{1})?[-. ]?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/,
-            isRequired: true
-          }
         }
-      };
+      }
+    };
     const UserFormWithFormFunctional = withFormFunctional(formControls)(
       UserForm
     );
     return (
       <UserFormWithFormFunctional
         method="edit"
-        url={`${this.props.url}/${user.id}`}
+        url={`${this.props.url}/users/${user.id}`}
       />
     );
   }
