@@ -107,34 +107,15 @@
   font-size: 18px;
   word-wrap: break-word;
 }
-/* .main-content__section-2__img-1,
-.main-content__section-2__img-2,
-.main-content__section-2__img-3 {
-  width: 465px;
-  height: 465px;
-  background-size: cover;
-}
-.main-content__section-2__img-1 {
-  background-image: url('../images//pickles-blog-beet-on-pink-square.jpeg');
-  margin-right: 50px;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-.main-content__section-2__img-2 {
-  background-image: url('../images//pickles-blog-cucumber-on-green.jpeg');
-  margin-right: 50px;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-.main-content__section-2__img-3 {
-  background-image: url('../images//pickles-blog-lemon-on-blue-square.jpeg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-} */
 
 .main-content__section-2 > img {
   width: 30%;
-  padding: 25px;
+  margin: 10px;
+  padding: 0;
+}
+.main-content__section-2__img-2{
+  margin-left: 20px !important;
+  margin-right: 20px !important;
 }
 /* #endregion Main-Content-Section */
 
@@ -207,7 +188,7 @@
 }
 
 .main-content-2__section-2 > img {
-  padding: 20px;
+  margin: 10px;
   max-width: 50%;
   height: auto;
 }
