@@ -13,8 +13,8 @@
   color: var(--purplyGray);
   font-family: Poppins;
   font-size: 2.5em;
-  padding-bottom: 20px;
-  margin-bottom: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .profile-container {
   display: flex;

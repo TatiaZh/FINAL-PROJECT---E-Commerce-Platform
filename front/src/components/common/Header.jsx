@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import '../../CSS/common/header.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import "../../CSS/common/header.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: localStorage.getItem('user')
-        ? JSON.parse(localStorage.getItem('user'))
+      user: localStorage.getItem("user")
+        ? JSON.parse(localStorage.getItem("user"))
         : null,
       isLoading: false
     };
@@ -17,7 +17,7 @@ class Header extends Component {
   handleSignOut = () => {
     this.setState({ isLoading: true });
     const user = null;
-    localStorage.removeItem('user');
+    localStorage.removeItem("user");
     setTimeout(() => this.setState({ user, isLoading: false }), 1000);
     window.location = `/login`;
   };
@@ -30,7 +30,7 @@ class Header extends Component {
           <div className="header__inner">
             <nav className="nav">
               <ul className="nav__ul">
-                <li className="nav__ul__item">
+                <li >
                   <Link to={`/`} className="nav__ul__item__link">
                     Home
                   </Link>
@@ -54,11 +54,12 @@ class Header extends Component {
             </nav>
             <div className="header__inner__logo">
               <img
-                src={'../../images/logo.png'}
+                src={"../../images/logo.png"}
                 alt="BRINE"
                 className="header__inner__logo--img"
               />
             </div>
+        
             <div className="header__inner__cart-login">
               {user && !user.isAdmin ? (
                 <div className="header__inner__cart">
@@ -86,7 +87,7 @@ class Header extends Component {
                     </>
                   ) : (
                     <>
-                      <div>
+                      <div className="userProfile-icon__div">
                         <Link to={`/user/profile`}>
                           <FontAwesomeIcon
                             icon="user"
@@ -120,6 +121,32 @@ class Header extends Component {
               </div>
             </div>
           </div>
+          <div className="dropdown-menu">
+              <nav className="nav visible">
+                <ul className="nav__ul">
+                  <li className="nav__ul__item">
+                    <Link to={`/`} className="nav__ul__item__link">
+                      Home
+                    </Link>
+                  </li>
+                  <li className="nav__ul__item">
+                    <Link to={`/shop`} className="nav__ul__item__link">
+                      Shop
+                    </Link>
+                  </li>
+                  <li className="nav__ul__item">
+                    <Link to={`/blog`} className="nav__ul__item__link">
+                      Blog
+                    </Link>
+                  </li>
+                  <li className="nav__ul__item">
+                    <Link to={`/contact`} className="nav__ul__item__link">
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+            </div>
         </div>
       </header>
     );
