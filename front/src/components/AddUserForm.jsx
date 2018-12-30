@@ -1,6 +1,6 @@
 import React from "react";
-import withFormFunctional from "../../common/HOCs/withFormFunctional";
-import ProductForm from "./ProductForm";
+import withFormFunctional from "../components/common/HOCs/withFormFunctional";
+import RegiseterPage from "./RegisterPage";
 
 const AddUserForm = props => {
   const formControls = {
@@ -57,7 +57,7 @@ const AddUserForm = props => {
       value: "",
       placeholder: "Date of your birth",
       validationRules: {
-        format: /^[0-9]+$/,
+        format: /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/,
         isRequired: true
       }
     },
@@ -65,13 +65,13 @@ const AddUserForm = props => {
       value: "",
       placeholder: "Your mobile phone",
       validationRules: {
-        format:  /^\d{4}-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/,
+        format: /^\(?([0-9]{1})?[-. ]?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/,
         isRequired: true
       }
     }
   };
   const UserFormWithFormFunctional = withFormFunctional(formControls)(
-    ProductForm
+    RegiseterPage
   );
   return <UserFormWithFormFunctional method="add" {...props} />;
 };

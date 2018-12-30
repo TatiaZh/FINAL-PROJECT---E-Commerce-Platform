@@ -1,22 +1,25 @@
-import React from 'react';
-import TextInput from '../../common/inputs/TextInput';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from "react";
+import TextInput from "./common/inputs/TextInput";
+import PasswordInput from "../components/common/inputs/PasswordInput";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../CSS/common/form.css";
 
 const UserForm = ({
   formIsValid,
   formControls,
   isLoading,
-  error,
   method,
+  error,
+  done,
   handleChange,
   handleSubmit
 }) => {
   const {
-    id,
     name,
     username,
     email,
-    password,
+    newPassword,
+    repeatNewPassword,
     age,
     birthday,
     phone
@@ -25,7 +28,7 @@ const UserForm = ({
   return (
     <>
       <div className="form-wrapper">
-        <h1 className="form-title">Edit Settings</h1>
+        <h1 className="form-title">Register Page</h1>
 
         {error ? <p className="error">{error}</p> : null}
         <form onSubmit={handleSubmit} className="form-container">
@@ -59,25 +62,25 @@ const UserForm = ({
             onChange={handleChange}
             className="form-input"
           />
-          <PasswrodInput
-            type="text"
+          <PasswordInput
+            type="password"
             name="newPassword"
-            maxLength={password.validationRules.maxLength}
-            defaultValue={password.value}
-            placeholder={password.placeholder}
-            touched={password.touched}
-            valid={password.valid}
+            maxLength={newPassword.validationRules.maxLength}
+            defaultValue={newPassword.value}
+            placeholder={newPassword.placeholder}
+            touched={newPassword.touched}
+            valid={newPassword.valid}
             onChange={handleChange}
             className="form-input"
           />
-          <PasswrodInput
-            type="text"
+          <PasswordInput
+            type="password"
             name="repeatNewPassword"
-            maxLength={password.validationRules.maxLength}
-            defaultValue={password.value}
-            placeholder={password.placeholder}
-            touched={password.touched}
-            valid={password.valid}
+            maxLength={repeatNewPassword.validationRules.maxLength}
+            defaultValue={repeatNewPassword.value}
+            placeholder={repeatNewPassword.placeholder}
+            touched={repeatNewPassword.touched}
+            valid={repeatNewPassword.valid}
             onChange={handleChange}
             className="form-input"
           />
@@ -120,8 +123,10 @@ const UserForm = ({
               <FontAwesomeIcon icon="spinner" spin />
             ) : done ? (
               <FontAwesomeIcon icon="check" />
+            ) : method === "add" ? (
+              "Register"
             ) : (
-              'Save'
+              "Edit"
             )}
           </button>
         </form>
