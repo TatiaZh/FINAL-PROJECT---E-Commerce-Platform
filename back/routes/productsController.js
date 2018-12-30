@@ -123,8 +123,8 @@ router.route('/:id/reviews').post((req, res) => {
 router.route('/:id/sold').post((req, res) => {
   let productsDB = JSON.parse(fs.readFileSync('db/products.json'));
   const id = req.params.id;
-  const timesBought = req.params.timesBought;
-  const stock = req.params.stock;
+  const timesBought = req.body.timesBought;
+  const stock = req.body.stock;
 
   let product = productsDB.find(product => product.id == id);
   if (!product) {

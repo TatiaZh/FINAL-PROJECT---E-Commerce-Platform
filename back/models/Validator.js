@@ -97,8 +97,8 @@ function validateAdminUser(user) {
 }
 
 function validateUser(user) {
-  const { name, username, age, birthday, address, phone } = user;
-  const { country, region, street, suite, zipcode } = address;
+  const { name, username, age, birthday, phone } = user;
+  // const { country, region, street, suite, zipcode } = address;
 
   // validator syntax
   const email = user.email || '';
@@ -137,12 +137,12 @@ function validateUser(user) {
   // }
 
   if (
-    !isString(phone) ||
-    !isString(country) ||
-    !isString(region) ||
-    !isString(street) ||
-    !isString(suite) ||
-    !isString(zipcode)
+    !isString(phone)
+    // !isString(country) ||
+    // !isString(region) ||
+    // !isString(street) ||
+    // !isString(suite) ||
+    // !isString(zipcode)
   ) {
     return {
       error:
@@ -150,7 +150,7 @@ function validateUser(user) {
     };
   }
 
-  return { name, username, email, password, age, birthday, address, phone };
+  return { name, username, email, password, age, birthday, phone };
 }
 
 function validatePayment(data) {

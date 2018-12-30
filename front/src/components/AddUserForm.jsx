@@ -1,35 +1,36 @@
-import React from "react";
-import withFormFunctional from "../../common/HOCs/withFormFunctional";
-import ProductForm from "./ProductForm";
+import React from 'react';
+import withFormFunctional from '../components/common/HOCs/withFormFunctional';
+import RegiseterPage from './RegisterPage';
 
 const AddUserForm = props => {
   const formControls = {
     name: {
-      value: "",
-      placeholder: "Your Name",
+      value: '',
+      placeholder: 'Your Name',
       validationRules: {
         maxLength: 250,
         isRequired: true
       }
     },
     username: {
-      value: "",
-      placeholder: "Choose an username",
+      value: '',
+      placeholder: 'Choose an username',
       validationRules: {
         format: /^[a-zA-Z\-]+$/,
         isRequired: true
       }
     },
     email: {
-      value: "",
-      placeholder: "Your Email",
+      value: '',
+      placeholder: 'Your Email',
       validationRules: {
+        format: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
         isRequired: true
       }
     },
     newPassword: {
-      value: "",
-      placeholder: "Your Password",
+      value: '',
+      placeholder: 'Your Password',
       validationRules: {
         minLength: 8,
         maxLength: 30,
@@ -37,8 +38,8 @@ const AddUserForm = props => {
       }
     },
     repeatNewPassword: {
-      value: "",
-      placeholder: "Repeat New Password",
+      value: '',
+      placeholder: 'Repeat New Password',
       validationRules: {
         minLength: 8,
         maxLength: 30,
@@ -46,34 +47,41 @@ const AddUserForm = props => {
       }
     },
     age: {
-      value: "",
-      placeholder: "Age",
+      value: '',
+      placeholder: 'Age',
       validationRules: {
         format: /^[0-9]+$/,
         isRequired: true
       }
     },
     birthday: {
-      value: "",
-      placeholder: "Date of your birth",
+      value: '',
+      placeholder: 'Date of your birth',
       validationRules: {
-        format: /^[0-9]+$/,
+        format: /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/,
         isRequired: true
       }
     },
     phone: {
-      value: "",
-      placeholder: "Your mobile phone",
+      value: '',
+      placeholder: 'Your mobile phone',
       validationRules: {
-        format:  /^\d{4}-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/,
+        format: /^\(?([0-9]{1})?[-. ]?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/,
         isRequired: true
       }
     }
   };
   const UserFormWithFormFunctional = withFormFunctional(formControls)(
-    ProductForm
+    RegiseterPage
   );
-  return <UserFormWithFormFunctional method="add" {...props} />;
+
+  return (
+    <UserFormWithFormFunctional
+      method="add"
+      url={`${props.url}register`}
+      // {...props}
+    />
+  );
 };
 
 export default AddUserForm;
