@@ -4,7 +4,7 @@ import PasswordInput from "../components/common/inputs/PasswordInput";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../CSS/common/form.css";
 
-const UserForm = ({
+const RegisteForm = ({
   formIsValid,
   formControls,
   isLoading,
@@ -31,7 +31,7 @@ const UserForm = ({
         <h1 className="form-title">Register Page</h1>
 
         {error ? <p className="error">{error}</p> : null}
-        <form onSubmit={handleSubmit} className="form-container">
+        <form onSubmit={handleSubmit} method="add" className="form-container">
           <TextInput
             type="text"
             name="name"
@@ -134,4 +134,4 @@ const UserForm = ({
     </>
   );
 };
-export default UserForm;
+export default RegisteForm;
