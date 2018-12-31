@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 class UsersTableRow extends Component {
   render() {
     const { item, onDelete, match, className } = this.props;
+    console.log(item)
     return (
       <>
         {!item.isAdmin ? (
@@ -24,7 +25,7 @@ class UsersTableRow extends Component {
             <td>{item.email}</td>
             <td className="table__row__cell--fixed-width">{item.phone}</td>
             <td>
-              {item.boughtProducts.length > 0 ? (
+              {item.boughtProducts && item.boughtProducts.length > 0 ? (
                 <Link
                   to={`${match.path}/${item.id}/boughtProducts`}
                   className="link--admin"

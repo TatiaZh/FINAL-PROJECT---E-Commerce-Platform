@@ -29,16 +29,6 @@
     "responded": false
   },
   {
-    "id": 5,
-    "title": "Test Message 5",
-    "text": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium",
-    "name": "John",
-    "surname": "Doe",
-    "email": "johndoe@example.com",
-    "dateSent": "2018-01-01",
-    "responded": false
-  },
-  {
     "id": 6,
     "title": "Test Message 6",
     "text": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium",
@@ -48,7 +38,6 @@
     "dateSent": "2018-01-01",
     "responded": false
   },
-
   {
     "id": 17,
     "title": "Some Product",
@@ -56,6 +45,46 @@
     "name": "Name",
     "surname": "LastName",
     "email": "tatia.zh@gmail.com",
+    "dateSent": "2018-12-30",
+    "responded": false
+  },
+  {
+    "id": 18,
+    "title": "good subject",
+    "text": "lovely message",
+    "name": "Anjaparidze",
+    "surname": "Mamuka",
+    "email": "anjaparidzemamuka@gmail.com",
+    "dateSent": "2018-12-30",
+    "responded": false
+  },
+  {
+    "id": 19,
+    "title": "good subject",
+    "text": "lovely message",
+    "name": "asd",
+    "surname": "asd",
+    "email": "asdasd",
+    "dateSent": "2018-12-30",
+    "responded": false
+  },
+  {
+    "id": 20,
+    "title": "Fire of mount \"Mtatsminda\"",
+    "text": "message",
+    "name": "Mamuka ",
+    "surname": "Anjaparidze",
+    "email": "iiiuuuuuuuuiii",
+    "dateSent": "2018-12-30",
+    "responded": false
+  },
+  {
+    "id": 21,
+    "title": "Fire of mount \"Mtatsminda\"",
+    "text": "message",
+    "name": "Mamuka ",
+    "surname": "Anjaparidze",
+    "email": "info@info.com",
     "dateSent": "2018-12-30",
     "responded": false
   }

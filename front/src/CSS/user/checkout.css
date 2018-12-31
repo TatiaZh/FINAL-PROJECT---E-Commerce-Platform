@@ -21,6 +21,10 @@
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  margin:150px auto;
+}
+.checkout--shipping--address--two{
+  display: block;
 }
 
 /* .checkout--email--input{
@@ -34,6 +38,7 @@
   font-size: 16px;
   height: 45px;
   margin-top: 7px;
+  display:block;
 }
 
 .checkout--continue {

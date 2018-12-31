@@ -4,13 +4,13 @@
     "name": "Admin Someone",
     "username": "admin",
     "email": "admin@admin.com",
-    "password": "1026e264ea829674d50a4918f7fb88d0c978753f415357416ecbf8cd0ae19fed",
+    "password": "b24e647e47d50777eb582c585b890dc0f5ccf69e54a13977ae3d6ebd368fe381",
     "isAdmin": true
   },
   {
     "id": 1,
     "name": "Leanne Graham",
-    "username": "user",
+    "username": "user1",
     "email": "Sincere@april.biz",
     "password": "9dae429c9cb0c73e1a9a21ce331fb4ed00db605f8aceeaf2b78801f5679f301f",
     "age": "27",
@@ -26,12 +26,8 @@
     ],
     "cart": [
       {
-        "id": "2",
-        "quantity": "3"
-      },
-      {
         "id": "1",
-        "quantity": "4"
+        "quantity": "20"
       }
     ]
   },
@@ -121,21 +117,5 @@
     "balance": "1000",
     "boughtProducts": [],
     "cart": []
-  },
-  {
-    "id": 6,
-    "name": "Name",
-    "username": "tatia",
-    "email": "tatia.zh@gmail.com",
-    "password": "58872f6ccee92a8b89014aa6d9776d94dab05b27b66680c3fab3ad474946d1cc",
-    "age": "20",
-    "birthday": "1998-10-04",
-    "phone": "1-111-111-1111",
-    "balance": "0",
-    "broughtProducts": [],
-    "cart": {
-      "active": false,
-      "products": []
-    }
   }
 ]

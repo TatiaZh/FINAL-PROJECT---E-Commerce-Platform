@@ -36,7 +36,7 @@ const BoughtProducts = ({ data, isLoading, error }) => {
                 <td>{item.quantity}</td>
                 <td>
                   <Link
-                    to={`../../products/${item.id}`}
+                    to={`/products/${item.id}`}
                     className="link--admin"
                   >
                     View Details

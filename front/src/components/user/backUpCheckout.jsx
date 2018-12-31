@@ -3,9 +3,7 @@ import '../../CSS/user/checkout.css';
 
 // import './checkout.css';
 class Checkout extends Component {
-  
   render() {
-    
     return (
       <div className="checkout--container">
         <div className="checkout--information">
@@ -13,6 +11,7 @@ class Checkout extends Component {
             <div className="checkout--number"> 1 </div>
             <h3> Your Email</h3>
             <input type="text" placeholder="enter your email" />
+            <button className="checkout--continue">Continue</button>
           </div>
           <div className="checkout--shipping">
             <div className="checkout--number"> 2 </div>
@@ -54,9 +53,10 @@ class Checkout extends Component {
                 placeholder="State"
               />
             </form>
-            <button  className="checkout--continue">BUY NOW</button>
+            <button className="checkout--continue">Continue</button>
           </div>
           <div className="checkout--payment">
+            <div className="checkout--number"> 3 </div>
           </div>
         </div>
       </div>

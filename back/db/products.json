@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "title": "beni shoga",
+    "title": "beni shoga 2",
     "desc": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
     "price": "10.00",
     "images": "../images/prod1_1.jpg,../images/prod1_2.jpg",
-    "stock": "20",
+    "stock": "21",
     "timesBought": "5",
     "nutritionFacts": "Total Fat: 0.6g 1%, Cholesterol: 0mg 0%, Sodium: 400mg 17%, Potassium: 0mg 0%, Total Carbohydrate: 0g 0%, Protein: 23.5g 47%, Vitamin A: 0%, Vitamin C: 0%, Calcium: 0%, Iron: 0%",
     "reviwes": [

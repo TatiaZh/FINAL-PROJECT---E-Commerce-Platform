@@ -118,7 +118,7 @@ const RegisteForm = ({
             className="form-input"
           />
 
-          <button type="submit" disabled={!formIsValid} className="form-button">
+          <button type="submit" disabled={!formIsValid} className="form-button" onClick={() => {window.location="/user/profile"}}>
             {isLoading ? (
               <FontAwesomeIcon icon="spinner" spin />
             ) : done ? (
